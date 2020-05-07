@@ -20,6 +20,8 @@ module.exports = {
     'dot-notation': "off",
     'no-path-concat': "off",
     "space-before-function-paren": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    'object-curly-newline': "off",
+    'no-trailing-spaces': "off"
   }
 };

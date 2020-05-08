@@ -1,0 +1,18 @@
+{
+  "development": {
+    "username": "root",
+    "password": "qaz778899",
+    "database": "garbage_dev",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "serverTimezone": "Asia/Shanghai"
+  },
+  "production": {
+    "username": "root",
+    "password": "qaz778899",
+    "database": "garbage_prod",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "serverTimezone": "Asia/Shanghai"
+  }
+}

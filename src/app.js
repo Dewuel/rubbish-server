@@ -16,7 +16,7 @@ const app = new Koa();
 
 const isDevMode = process.env.NODE_ENV !== 'production'
 
-const jwt = JWT({ secret: config.JWT_SECRET }).unless({ path: [/^\/public/, /^\/login/, /^\/register/] })
+const jwt = JWT({ secret: config.JWT_SECRET }).unless({ path: [/^\/public/, /^\/users\/login/, /^\/users\/register/] })
 
 // error handler
 onerror(app)

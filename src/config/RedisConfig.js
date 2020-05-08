@@ -5,7 +5,7 @@ import config from './index'
 const options = {
   host: config.REDIS.host,
   port: config.REDIS.port,
-  password: config.REDIS.password,
+  // password: config.REDIS.password,
   detect_buffers: true,
   retry_strategy: function (options) {
     if (options.error && options.error.code === 'ECONNREFUSED') {
@@ -40,7 +40,8 @@ const setValue = (key, value, time) => {
   }
   if (typeof value === 'string') {
     if (typeof time !== 'undefined') {
-      client.set(key, value, 'EX', time)
+      client.set(key, value)
+      client.expire(key, time)
     } else {
       client.set(key, value)
     }

@@ -1,5 +1,5 @@
 export default class ResultVo {
-  static async success(data) {
+  static success(data) {
     return {
       code: 0,
       message: 'success',
@@ -7,10 +7,17 @@ export default class ResultVo {
     }
   }
 
-  static async successNull() {
+  static successNull() {
     return {
       code: 0,
       message: 'success'
+    }
+  }
+
+  static fail(code, msg) {
+    return {
+      code,
+      message: msg
     }
   }
 }

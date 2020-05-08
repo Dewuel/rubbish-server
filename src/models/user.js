@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     gender: {
       type: DataTypes.INTEGER(4),
@@ -37,10 +38,6 @@ module.exports = function(sequelize, DataTypes) {
     tel: {
       type: DataTypes.STRING(16),
       allowNull: true
-    },
-    role_id: {
-      type: DataTypes.INTEGER(11),
-      allowNull: false
     },
     user_status: {
       type: DataTypes.INTEGER(4),

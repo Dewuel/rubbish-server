@@ -16,18 +16,20 @@ const app = new Koa();
 
 const isDevMode = process.env.NODE_ENV !== 'production'
 
-const jwt = JWT({ secret: config.JWT_SECRET }).unless({ path: [/^\/public/, /^\/users\/login/, /^\/users\/register/] })
+const jwt = JWT({ secret: config.JWT_SECRET }).unless({
+  path: [/^\/public/, /^\/users\/login/, /^\/users\/register/, /^\/users\/code/]
+})
 
 // error handler
 onerror(app)
 
 const middleware = compose([
   koaBody(),
-  statics(path.join(__dirname, '../public')),
+  statics(path.join(__dirname, 'public')),
   cors(),
   helmet(),
   koaJson(),
-  jwt,
+  jwt
 ])
 app.use(middleware)
 
@@ -36,7 +38,7 @@ app.use(async (ctx, next) => {
   const start = new Date()
   await next()
   const ms = new Date() - start
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
+  console.log(`${ctx.method} ${ctx.url}  ${ctx.status} - ${ms}ms`)
 })
 
 if (!isDevMode) {
@@ -44,7 +46,7 @@ if (!isDevMode) {
 }
 
 // routes
-app.use(router)
+app.use(router())
 
 // error-handling
 app.on('error', (err, ctx) => {

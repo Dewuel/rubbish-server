@@ -1,9 +1,10 @@
 const REDIS = {
   host: '127.0.0.1',
-  port: 6379
+  port: 6379,
+  password: ''
 }
 const JWT_SECRET =
-  'a&*38QthAKuiRwISGLotgq^3%^$zvA3A6Hfr8MF$jM*HY4*dWcwAW&9NGp7*b53!'
+  'a&*38QthAKuiRwISGLodge^3%^$zvA3A6Hfr8MF$jM*HY4*dWcwAW&9NGp7*b53!'
 
 const baseUrl =
   process.env.NODE_ENV === 'production'

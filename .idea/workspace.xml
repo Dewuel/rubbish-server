@@ -1,8 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:gitee" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="755676eb-4bd5-4dca-b6aa-03b2b6bf2c0f" name="Default Changelist" comment="">
+    <list default="true" id="bbb39d37-ed2f-49f2-87ae-16296b315da2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/controller/UserController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/service/UserService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/enum.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/MailConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/MailConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/RedisConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/RedisConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/category.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/dustbin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/dustbin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/garbage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/garbage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/hot_article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/hot_article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/integral.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/integral.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/knowledge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/knowledge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/record.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/modules/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/ResultVo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ResultVo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +51,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1bZCPAN4F7Y0Pdz9OQ8a4gfcfaO" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bbTLo8dMh8WVjlwhOhgtX8XLr9" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -25,30 +71,82 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.16.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Node\bs_refuse\src\enums" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="755676eb-4bd5-4dca-b6aa-03b2b6bf2c0f" name="Default Changelist" comment="" />
-      <created>1588830201514</created>
+      <changelist id="bbb39d37-ed2f-49f2-87ae-16296b315da2" name="Default Changelist" comment="" />
+      <created>1588899739767</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1588830201514</updated>
-      <workItem from="1588830202923" duration="1562000" />
-      <workItem from="1588898747268" duration="558000" />
+      <updated>1588899739767</updated>
+      <workItem from="1588899742047" duration="22759000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="823" y="434" key="#ESLint" timestamp="1588902056487">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="823" y="434" key="#ESLint/0.0.1920.1050@0.0.1920.1050" timestamp="1588902056487" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588904632729">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588904632729" />
+    <state width="1877" height="270" key="GridCell.Tab.0.bottom" timestamp="1588900039542">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1588900039542" />
+    <state width="1877" height="270" key="GridCell.Tab.0.center" timestamp="1588900039542">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="270" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1588900039542" />
+    <state width="1877" height="270" key="GridCell.Tab.0.left" timestamp="1588900039541">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="270" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1588900039541" />
+    <state width="1877" height="270" key="GridCell.Tab.0.right" timestamp="1588900039542">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="270" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1588900039542" />
+    <state x="540" y="259" key="IDE.errors.dialog" timestamp="1588907461033">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="540" y="259" key="IDE.errors.dialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588907461033" />
   </component>
 </project>

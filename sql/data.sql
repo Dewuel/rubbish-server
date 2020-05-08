@@ -103,7 +103,7 @@ create table `admin`(
   `id` int auto_increment not null,
   `username` varchar(32) not null,
   `password` varchar(64) not null,
-  `admin_status` tinyint not null,
+  `admin_status` tinyint not null default 0,
   `createdAt` timestamp not null default current_timestamp comment '创建时间',
   `updatedAt` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
   primary key(`id`),

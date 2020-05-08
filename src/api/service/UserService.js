@@ -7,7 +7,6 @@ class UserService {
   async save(data) {
     const { email, password } = data
     const name = Math.random().toString(32).substr(-4, 4)
-    if (!email || !password) return ResultVo.fail(10000, errCode['10000'])
     return await models.user.create({ email, password, name });
   }
 

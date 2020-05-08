@@ -19,7 +19,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     admin_status: {
       type: DataTypes.INTEGER(4),
-      allowNull: false
+      allowNull: false,
+      defaultValue: '0'
     },
     createdAt: {
       type: DataTypes.DATE,

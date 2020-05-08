@@ -19,16 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbb39d37-ed2f-49f2-87ae-16296b315da2" name="Default Changelist" comment="">
+    <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/service/AdminService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/service/Category.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/service/DustbinService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controller/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/UserController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/service/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/UserService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enums/enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/enum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/modules/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/admin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,15 +37,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1bbTLo8dMh8WVjlwhOhgtX8XLr9" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectId" id="1bd0tPL2hQfOg4PUhvKvPK1LnT1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -54,62 +46,26 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.16.2" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.14.1" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Node\bs_refuse\src\enums" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bbb39d37-ed2f-49f2-87ae-16296b315da2" name="Default Changelist" comment="" />
-      <created>1588899739767</created>
+      <changelist id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="" />
+      <created>1588946876386</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1588899739767</updated>
-      <workItem from="1588899742047" duration="22759000" />
-      <workItem from="1588944116888" duration="357000" />
-      <workItem from="1588945852626" duration="272000" />
+      <updated>1588946876386</updated>
+      <workItem from="1588946877934" duration="5428000" />
     </task>
     <servers />
   </component>
@@ -126,47 +82,35 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="823" y="434" key="#ESLint" timestamp="1588902056487">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="664" y="234" key="#JavaScript" timestamp="1588947853615">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="823" y="434" key="#ESLint/0.0.1920.1050@0.0.1920.1050" timestamp="1588902056487" />
-    <state x="793" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588946125069">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="664" y="234" key="#JavaScript/0.0.1920.1080@0.0.1920.1080" timestamp="1588947853615" />
+    <state x="559" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588948365678">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="793" y="172" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588946125069" />
-    <state x="1119" y="222" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1588946075451">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="559" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1588948365678" />
+    <state width="1352" height="257" key="GridCell.Tab.0.bottom" timestamp="1588947411386">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1119" y="222" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588946075451" />
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588904632729">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1352" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588947411386" />
+    <state width="1352" height="257" key="GridCell.Tab.0.center" timestamp="1588947411385">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588904632729" />
-    <state width="1877" height="270" key="GridCell.Tab.0.bottom" timestamp="1588900039542">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1352" height="257" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588947411385" />
+    <state width="1352" height="257" key="GridCell.Tab.0.left" timestamp="1588947411385">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1588900039542" />
-    <state width="1877" height="270" key="GridCell.Tab.0.center" timestamp="1588900039542">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1352" height="257" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588947411384" />
+    <state width="1352" height="257" key="GridCell.Tab.0.right" timestamp="1588947411386">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="270" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1588900039542" />
-    <state width="1877" height="270" key="GridCell.Tab.0.left" timestamp="1588900039541">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1352" height="257" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588947411386" />
+    <state x="498" y="169" key="SettingsEditor" timestamp="1588947529520">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="270" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1588900039541" />
-    <state width="1877" height="270" key="GridCell.Tab.0.right" timestamp="1588900039542">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="270" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1588900039542" />
-    <state x="540" y="259" key="IDE.errors.dialog" timestamp="1588907461033">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="540" y="259" key="IDE.errors.dialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588907461033" />
+    <state x="498" y="169" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1588947529520" />
   </component>
 </project>

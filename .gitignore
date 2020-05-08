@@ -8,7 +8,7 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-.idea/
+.idea
 .vscode
 
 # Icon must end with two \r
@@ -112,7 +112,7 @@ typings/
 .nuxt
 
 # react / gatsby 
-public/
+# public/
 
 # vuepress build output
 .vuepress/dist

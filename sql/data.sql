@@ -7,6 +7,7 @@ create table `user`(
   `integral_count` int not null default 0 comment '积分',
   `address` varchar(255),
   `tel` varchar(16),
+  `avatar` varchar(64),
   `user_status` tinyint not null default 0,
   `createdAt` timestamp not null default current_timestamp comment '创建时间',
   `updatedAt` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',

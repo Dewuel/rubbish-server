@@ -7,6 +7,8 @@ import dayjs from 'dayjs';
 import { setValue } from '@/config/RedisConfig';
 import { checkCode } from '@/utils/Utils';
 import jsonwebtoken from 'jsonwebtoken';
+import fs from 'fs'
+import path from 'path'
 import config from '../../config'
 
 class UserController {
@@ -57,7 +59,6 @@ class UserController {
   async login(ctx) {
     const { email, password } = ctx.request.body;
     const user = await UserService.findByEmail(email);
-    console.log('pass: ', user.password)
     if (bcrypt.compare(password, user.password)) {
       const token = jsonwebtoken.sign({
         id: user.id,
@@ -77,6 +78,51 @@ class UserController {
       }
       ctx.body = ResultVo.success(response)
     }
+  }
+
+  async changePass(ctx) {
+    const { email, oldPassword, newPassword, rePassword } = ctx.request.body;
+    if (!oldPassword || !newPassword || !rePassword) {
+      ctx.body = ResultVo.fail(10000, errCode[10000])
+      return
+    }
+
+    if (newPassword !== rePassword) {
+      ctx.body = ResultVo.fail(10005, errCode[10005])
+      return
+    }
+
+    const user = await UserService.findByEmail(email)
+    if (!bcrypt.compare(oldPassword, user.password)) {
+      ctx.body = ResultVo.fail(10006, errCode[10006])
+      return
+    }
+    const salt = bcrypt.genSaltSync(10);
+    const cryptPass = bcrypt.hashSync(newPassword, salt)
+    const res = await UserService.updatePass(email, { password: cryptPass })
+    console.log(res)
+  }
+
+  async changeUserInfo(ctx) {
+    const { id } = ctx.params;
+    const { body } = ctx.request;
+
+    if (!id) {
+      ctx.body = ResultVo.fail(10000, errCode[10000])
+      return
+    }
+    const res = await UserService.updateUser(id, body)
+    console.log(res)
+  }
+
+  async changeAvatar(ctx) {
+    const { file } = ctx.request.files;
+
+    const reader = fs.createReadStream(file.path)
+    const filePath = path.join(__dirname, 'public/upload', `${dayjs().format('YYYY-MM-dd')}-${file.name}`);
+    const writeStream = fs.createWriteStream(filePath)
+    reader.pipe(writeStream)
+    console.log(filePath)
   }
 }
 

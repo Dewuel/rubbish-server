@@ -1,5 +1,5 @@
 import Koa from 'koa'
-import JWT from 'koa-jwt'
+// import JWT from 'koa-jwt'
 import path from 'path'
 import helmet from 'koa-helmet'
 import statics from 'koa-static'
@@ -10,26 +10,31 @@ import cors from '@koa/cors'
 import compose from 'koa-compose'
 import compress from 'koa-compress'
 import onerror from 'koa-onerror'
-import config from './config/index'
+// import config from './config/index'
 
 const app = new Koa();
 
 const isDevMode = process.env.NODE_ENV !== 'production'
 
-const jwt = JWT({ secret: config.JWT_SECRET }).unless({
-  path: [/^\/public/, /^\/users\/login/, /^\/users\/register/, /^\/users\/code/]
-})
+// const jwt = JWT({ secret: config.JWT_SECRET }).unless({
+//   path: [/^\/public/, /^\/users\/login/, /^\/users\/register/, /^\/users\/code/]
+// })
 
 // error handler
 onerror(app)
 
 const middleware = compose([
-  koaBody(),
+  koaBody({
+    multipart: true,
+    formidable: {
+      maxFileSize: 10 * 1024 * 1024
+    }
+  }),
   statics(path.join(__dirname, 'public')),
   cors(),
   helmet(),
   koaJson(),
-  jwt
+  // jwt
 ])
 app.use(middleware)
 

@@ -40,6 +40,14 @@ class UserService {
     })
   }
 
+  async updatePass(email, data) {
+    return models.user.update(data, {
+      where: {
+        email
+      }
+    })
+  }
+
   async updateUser(id, data) {
     return models.user.update(data, {
       where: {

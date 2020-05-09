@@ -19,16 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/service/AdminService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/service/Category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/service/DustbinService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/service/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/UserService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/admin.js" afterDir="false" />
-    </list>
+    <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588946876386</updated>
-      <workItem from="1588946877934" duration="5428000" />
+      <workItem from="1588946877934" duration="5721000" />
     </task>
     <servers />
   </component>
@@ -92,22 +83,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="559" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1588948365678" />
-    <state width="1352" height="257" key="GridCell.Tab.0.bottom" timestamp="1588947411386">
+    <state width="1352" height="257" key="GridCell.Tab.0.bottom" timestamp="1588955386132">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1352" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588947411386" />
-    <state width="1352" height="257" key="GridCell.Tab.0.center" timestamp="1588947411385">
+    <state width="1352" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1588955386132" />
+    <state width="1352" height="257" key="GridCell.Tab.0.center" timestamp="1588955386129">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1352" height="257" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588947411385" />
-    <state width="1352" height="257" key="GridCell.Tab.0.left" timestamp="1588947411385">
+    <state width="1352" height="257" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1588955386129" />
+    <state width="1352" height="257" key="GridCell.Tab.0.left" timestamp="1588955386128">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1352" height="257" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588947411384" />
-    <state width="1352" height="257" key="GridCell.Tab.0.right" timestamp="1588947411386">
+    <state width="1352" height="257" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1588955386128" />
+    <state width="1352" height="257" key="GridCell.Tab.0.right" timestamp="1588955386131">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1352" height="257" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588947411386" />
+    <state width="1352" height="257" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588955386131" />
     <state x="498" y="169" key="SettingsEditor" timestamp="1588947529520">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

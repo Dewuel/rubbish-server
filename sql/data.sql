@@ -52,7 +52,7 @@ create table `category`(
 create table `garbage`(
   `id` int auto_increment not null,
   `category_id` int not null,
-  `garbage_info` text not null,
+  `garbage_info` varchar(64) not null,
   `createdAt` timestamp not null default current_timestamp comment '创建时间',
   `updatedAt` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
   primary key(`id`)

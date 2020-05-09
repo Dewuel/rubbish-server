@@ -71,6 +71,7 @@ create table `dustbin`(
 
 create table `hot_article`(
   `id` int auto_increment not null,
+  `title` varchar(255) not null,
   `description` varchar(255) not null,
   `content` text not null,
   `origin` varchar(64) not null comment '来源',

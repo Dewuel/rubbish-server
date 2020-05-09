@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/service/GarbageService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/service/HotArticleService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/service/IntegralService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/service/KnowledgeService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/service/QuestionService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/service/RecordService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/CategoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/CategoryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/GarbageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/GarbageService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/hot_article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/hot_article.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588946876386</updated>
       <workItem from="1588946877934" duration="5721000" />
+      <workItem from="1589033523330" duration="5518000" />
     </task>
     <servers />
   </component>

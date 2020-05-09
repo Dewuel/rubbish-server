@@ -46,6 +46,22 @@ class GarbageService {
       limit
     })
   }
+
+  async update(id, data) {
+    return models.garbage.update(data, {
+      where: {
+        id
+      }
+    })
+  }
+
+  async delete(id) {
+    return models.garbage.destroy({
+      where: {
+        id
+      }
+    })
+  }
 }
 
 export default new GarbageService();

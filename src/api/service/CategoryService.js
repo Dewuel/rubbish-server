@@ -9,10 +9,10 @@ class CategoryService {
     return models.category.findByPk(id);
   }
 
-  async findByType(category_type) {
+  async findByType(categoryType) {
     return models.category.findOne({
       where: {
-        category_type
+        category_type: categoryType
       }
     })
   }

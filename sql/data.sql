@@ -17,6 +17,7 @@ create table `user`(
 
 create table `record`(
   `id` int auto_increment not null,
+  `user_id` int not null,
   `record_num` varchar(64) not null,
   `estate` varchar(255) not null comment '小区',
   `dustbin_id` int not null comment '垃圾箱id',
@@ -102,11 +103,23 @@ create table `question`(
 
 create table `admin`(
   `id` int auto_increment not null,
+  `role_id` int not null,
   `username` varchar(32) not null,
   `password` varchar(64) not null,
+  `avatar` varchar(255),
   `admin_status` tinyint not null default 0,
   `createdAt` timestamp not null default current_timestamp comment '创建时间',
   `updatedAt` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
   primary key(`id`),
   unique key(`username`)
+);
+
+create table `role`(
+    `id` int auto_increment not null,
+    `role_num` varchar(64) not null,
+    `role_name` varchar(64) not null,
+    `createdAt` timestamp not null default current_timestamp comment '创建时间',
+    `updatedAt` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
+    primary key(`id`),
+    unique key (`role_num`)
 );

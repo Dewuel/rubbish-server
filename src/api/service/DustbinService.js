@@ -9,10 +9,10 @@ class DustbinService {
     return models.dustbin.findByPk(id)
   }
 
-  async findByDeviceCode(device_code) {
+  async findByDeviceCode(deviceCode) {
     return models.dustbin.findOne({
       where: {
-        device_code
+        device_code: deviceCode
       }
     })
   }

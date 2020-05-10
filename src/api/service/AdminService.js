@@ -16,12 +16,24 @@ class AdminService {
     return models.admin.findOne({
       where: {
         username
-      }
+      },
+      include: [
+        {
+          model: models.role,
+          attributes: ['role_num', 'role_name']
+        }
+      ]
     })
   }
 
   async findAll(offset = 0, limit = 10) {
     return models.admin.findAndCountAll({
+      include: [
+        {
+          model: models.role,
+          attributes: ['role_num', 'role_name']
+        }
+      ],
       offset,
       limit
     })
@@ -31,7 +43,13 @@ class AdminService {
     return models.admin.update(data, {
       where: {
         username
-      }
+      },
+      include: [
+        {
+          model: models.role,
+          attributes: ['role_num', 'role_name']
+        }
+      ]
     })
   }
 
@@ -43,16 +61,21 @@ class AdminService {
     })
   }
 
-  async findAllByStatus(admin_status, offset = 0, limit = 10) {
+  async findAllByStatus(adminStatus, offset = 0, limit = 10) {
     return models.admin.findAndCountAll({
       where: {
-        admin_status
+        admin_status: adminStatus
       },
+      include: [
+        {
+          model: models.role,
+          attributes: ['role_num', 'role_name']
+        }
+      ],
       offset,
       limit
     })
   }
-
 }
 
 export default new AdminService()

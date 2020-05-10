@@ -1,7 +1,6 @@
 import models from '../../models'
 import { Op } from 'sequelize';
 
-models.garbage.belongsTo(models.category, { foreignKey: 'category_id', targetKey: 'id' })
 class GarbageService {
   async save(data) {
     return models.garbage.create(data)

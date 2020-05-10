@@ -8,9 +8,14 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
-    category_id: {
+    categoryId: {
       type: DataTypes.INTEGER(11),
-      allowNull: false
+      allowNull: false,
+      field: 'category_id',
+      references: {
+        model: 'category',
+        key: 'id'
+      }
     },
     content: {
       type: DataTypes.TEXT,

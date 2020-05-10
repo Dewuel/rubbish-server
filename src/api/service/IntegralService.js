@@ -1,9 +1,5 @@
 import models from '../../models'
 
-models.integral.belongsTo(models.category, {
-  foreignKey: 'category_id'
-})
-
 class IntegralService {
   async save(data) {
     return models.integral.create(data)

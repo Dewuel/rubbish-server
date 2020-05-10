@@ -34,4 +34,18 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+db['role'].hasOne(db.admin)
+db['user'].hasOne(db.record)
+db['dustbin'].hasOne(db.record)
+db['category'].hasMany(db.garbage)
+db['category'].hasMany(db.integral)
+db['category'].hasMany(db.knowledge)
+db['garbage'].belongsTo(db.category, { foreignKey: 'category_id' })
+db['integral'].belongsTo(db.category, { foreignKey: 'category_id' })
+db['knowledge'].belongsTo(db.category, { foreignKey: 'category_id' })
+db['record'].belongsTo(db.user, { foreignKey: 'user_id' })
+db['record'].belongsTo(db.dustbin, { foreignKey: 'dustbin_id' })
+db['record'].belongsTo(db.category, { foreignKey: 'category_id' })
+db['admin'].belongsTo(db.role, { foreignKey: 'role_id' })
+
 module.exports = db;

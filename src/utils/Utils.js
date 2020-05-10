@@ -15,7 +15,12 @@ const checkCode = async (key, value) => {
   }
 }
 
+const genToken = data => {
+  return jwt.sign(data, config.JWT_SECRET, { expiresIn: 86400 })
+}
+
 export {
   checkCode,
-  getJWTPayload
+  getJWTPayload,
+  genToken
 }

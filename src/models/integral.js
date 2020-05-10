@@ -8,10 +8,15 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
-    category_id: {
+    categoryId: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
-      unique: true
+      unique: true,
+      field: 'category_id',
+      references: {
+        model: 'category',
+        key: 'id'
+      }
     },
     category_color: {
       type: DataTypes.STRING(32),

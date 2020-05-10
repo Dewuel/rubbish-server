@@ -8,6 +8,15 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
+    roleId: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      field: 'role_id',
+      references: {
+        model: 'role',
+        key: 'id'
+      }
+    },
     username: {
       type: DataTypes.STRING(32),
       allowNull: false,
@@ -16,6 +25,10 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING(64),
       allowNull: false
+    },
+    avatar: {
+      type: DataTypes.STRING(255),
+      allowNull: true
     },
     admin_status: {
       type: DataTypes.INTEGER(4),
@@ -33,6 +46,7 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
     }
   }, {
-    tableName: 'admin'
+    tableName: 'admin',
+    freezeTableName: true,
   });
 };

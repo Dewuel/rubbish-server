@@ -8,6 +8,15 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
+    userId: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      field: 'user_id',
+      references: {
+        model: 'user',
+        key: 'id'
+      }
+    },
     record_num: {
       type: DataTypes.STRING(64),
       allowNull: false,
@@ -17,9 +26,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(255),
       allowNull: false
     },
-    dustbin_id: {
+    dustbinId: {
       type: DataTypes.INTEGER(11),
-      allowNull: false
+      allowNull: false,
+      field: 'dustbin_id',
+      references: {
+        model: 'dustbin',
+        key: 'id'
+      }
     },
     room_num: {
       type: DataTypes.STRING(32),
@@ -27,7 +41,12 @@ module.exports = function(sequelize, DataTypes) {
     },
     category_id: {
       type: DataTypes.INTEGER(11),
-      allowNull: false
+      allowNull: false,
+      field: 'category_id',
+      references: {
+        model: 'category',
+        key: 'id'
+      }
     },
     createdAt: {
       type: DataTypes.DATE,

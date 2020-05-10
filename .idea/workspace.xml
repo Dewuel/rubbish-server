@@ -20,16 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/service/HotArticleService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/service/IntegralService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/service/KnowledgeService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/service/QuestionService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/service/RecordService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/controller/AdminController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/service/RoleService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/role.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/modules/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/service/CategoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/CategoryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/UserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/AdminService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/AdminService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/DustbinService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/DustbinService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/service/GarbageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/GarbageService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/hot_article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/hot_article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/IntegralService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/IntegralService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/KnowledgeService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/KnowledgeService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/RecordService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/RecordService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/UserService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/garbage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/garbage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/integral.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/integral.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/knowledge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/knowledge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/record.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +65,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.14.1" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.16.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -72,6 +85,7 @@
       <updated>1588946876386</updated>
       <workItem from="1588946877934" duration="5721000" />
       <workItem from="1589033523330" duration="5518000" />
+      <workItem from="1589093032085" duration="5672000" />
     </task>
     <servers />
   </component>

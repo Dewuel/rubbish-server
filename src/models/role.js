@@ -1,24 +1,20 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('garbage', {
+  return sequelize.define('role', {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    categoryId: {
-      type: DataTypes.INTEGER(11),
+    role_num: {
+      type: DataTypes.STRING(64),
       allowNull: false,
-      field: 'category_id',
-      references: {
-        model: 'category',
-        key: 'id'
-      }
+      unique: true
     },
-    garbage_info: {
-      type: DataTypes.TEXT,
+    role_name: {
+      type: DataTypes.STRING(64),
       allowNull: false
     },
     createdAt: {
@@ -32,6 +28,6 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
     }
   }, {
-    tableName: 'garbage'
+    tableName: 'role'
   });
 };

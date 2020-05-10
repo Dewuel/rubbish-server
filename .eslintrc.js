@@ -22,6 +22,7 @@ module.exports = {
     "space-before-function-paren": "off",
     "comma-dangle": "off",
     'object-curly-newline': "off",
-    'no-trailing-spaces': "off"
+    'no-trailing-spaces': "off",
+    'camelcase': "off"
   }
 };

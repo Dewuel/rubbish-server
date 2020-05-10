@@ -1,7 +1,5 @@
 import models from '../../models'
 
-models.knowledge.belongsTo(models.category, { foreignKey: 'category_id' })
-
 class KnowledgeService {
   async save(data) {
     return models.knowledge.create(data);

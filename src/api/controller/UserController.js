@@ -117,9 +117,6 @@ class UserController {
 
   async changeAvatar(ctx) {
     const { file } = ctx.request.files;
-
-    console.log(file)
-
     const reader = fs.createReadStream(file.path)
     const filePath = path.join(__dirname, 'public/upload', `${dayjs().format('YYYY-MM-dd')}-${file.name}`);
     const writeStream = fs.createWriteStream(filePath)

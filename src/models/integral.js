@@ -18,10 +18,6 @@ module.exports = function(sequelize, DataTypes) {
         key: 'id'
       }
     },
-    category_color: {
-      type: DataTypes.STRING(32),
-      allowNull: false
-    },
     integral_base: {
       type: DataTypes.INTEGER(11),
       allowNull: false

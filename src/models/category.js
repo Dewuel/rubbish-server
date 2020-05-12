@@ -17,6 +17,10 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       unique: true
     },
+    category_color: {
+      type: DataTypes.STRING(32),
+      allowNull: false
+    },
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,

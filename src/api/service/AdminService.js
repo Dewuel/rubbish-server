@@ -9,7 +9,9 @@ class AdminService {
   }
 
   async findOne(id) {
-    return models.admin.findByPk(id)
+    return models.admin.findByPk(id, {
+      attributes: ['id', 'username', 'nickname', 'avatar', 'admin_status', 'createdAt']
+    })
   }
 
   async findByUsername(username) {
@@ -34,6 +36,7 @@ class AdminService {
           attributes: ['role_num', 'role_name']
         }
       ],
+      attributes: ['id', 'username', 'nickname', 'avatar', 'admin_status', 'createdAt'],
       offset,
       limit
     })
@@ -72,6 +75,40 @@ class AdminService {
           attributes: ['role_num', 'role_name']
         }
       ],
+      offset,
+      limit
+    })
+  }
+
+  async findAllByUsername(username, offset = 0, limit = 10) {
+    return models.admin.findAndCountAll({
+      where: {
+        username,
+      },
+      include: [
+        {
+          model: models.role,
+          attributes: ['role_num', 'role_name']
+        }
+      ],
+      attributes: ['id', 'username', 'nickname', 'avatar', 'admin_status', 'createdAt'],
+      offset,
+      limit
+    })
+  }
+
+  async findAllByUserId(id, offset = 0, limit = 10) {
+    return models.admin.findAndCountAll({
+      where: {
+        id
+      },
+      include: [
+        {
+          model: models.role,
+          attributes: ['role_num', 'role_name']
+        }
+      ],
+      attributes: ['id', 'username', 'nickname', 'avatar', 'admin_status', 'createdAt'],
       offset,
       limit
     })

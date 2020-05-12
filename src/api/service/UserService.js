@@ -11,7 +11,10 @@ class UserService {
   }
 
   async findById(id) {
-    return models.user.findByPk(id);
+    return models.user.findByPk(id, {
+      attributes: ['id', 'gender', 'name', 'email', 'integral_count', 'address',
+        'tel', 'user_status', 'avatar', 'createdAt']
+    });
   }
 
   async findByEmail(email) {
@@ -24,8 +27,10 @@ class UserService {
 
   async findAllUser(offset = 0, limit = 10) {
     return models.user.findAndCountAll({
+      offset,
       limit,
-      offset
+      attributes: ['id', 'gender', 'name', 'email', 'integral_count', 'address',
+        'tel', 'user_status', 'avatar', 'createdAt']
     })
   }
 
@@ -52,6 +57,38 @@ class UserService {
       where: {
         id
       }
+    })
+  }
+
+  async delete(id) {
+    return models.user.destroy({
+      where: {
+        id
+      }
+    })
+  }
+
+  async findAllByEmail(email, offset = 0, limit = 10) {
+    return models.user.findAndCountAll({
+      where: {
+        email
+      },
+      attributes: ['id', 'gender', 'name', 'email', 'integral_count', 'address',
+        'tel', 'user_status', 'avatar', 'createdAt'],
+      offset,
+      limit
+    })
+  }
+
+  async findAllById(id, offset = 0, limit = 10) {
+    return models.user.findAndCountAll({
+      where: {
+        id
+      },
+      attributes: ['id', 'gender', 'name', 'email', 'integral_count', 'address',
+        'tel', 'user_status', 'avatar', 'createdAt'],
+      offset,
+      limit
     })
   }
 }

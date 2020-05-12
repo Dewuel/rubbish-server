@@ -1,5 +1,5 @@
 import Koa from 'koa'
-// import JWT from 'koa-jwt'
+import JWT from 'koa-jwt'
 import path from 'path'
 import helmet from 'koa-helmet'
 import statics from 'koa-static'
@@ -10,15 +10,17 @@ import cors from '@koa/cors'
 import compose from 'koa-compose'
 import compress from 'koa-compress'
 import onerror from 'koa-onerror'
-// import config from './config/index'
+import config from './config/index'
+// import { getJWTPayload } from '@/utils/Utils';
 
 const app = new Koa();
 
 const isDevMode = process.env.NODE_ENV !== 'production'
 
-// const jwt = JWT({ secret: config.JWT_SECRET }).unless({
-//   path: [/^\/public/, /^\/users\/login/, /^\/users\/register/, /^\/users\/code/]
-// })
+const jwt = JWT({ secret: config.JWT_SECRET }).unless({
+  path: [/^\/static/, /^\/users\/login/, /^\/users\/register/, /^\/users\/getcode/, /^\/users\/code/,
+    /^\/cms\/admin\/login/]
+})
 
 // error handler
 onerror(app)
@@ -30,11 +32,11 @@ const middleware = compose([
       maxFileSize: 10 * 1024 * 1024
     }
   }),
-  statics(path.join(__dirname, 'public')),
+  statics(path.join(process.cwd(), 'public')),
   cors(),
   helmet(),
   koaJson(),
-  // jwt
+  jwt
 ])
 app.use(middleware)
 
@@ -52,7 +54,13 @@ if (!isDevMode) {
 
 // routes
 app.use(router())
-
+// app.use(async (ctx, next) => {
+//   const token = ctx.request.headers['authorization']
+//   const payload = getJWTPayload(token)
+//   if (payload.role_num === 'ROLE_COMMON' || payload.role_num === 'ROLE_SUPER') {
+//     await next()
+//   }
+// })
 // error-handling
 app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)

@@ -19,8 +19,13 @@ const genToken = data => {
   return jwt.sign(data, config.JWT_SECRET, { expiresIn: 86400 })
 }
 
+const toInt = num => {
+  return Number(num) || 0
+}
+
 export {
   checkCode,
   getJWTPayload,
-  genToken
+  genToken,
+  toInt
 }

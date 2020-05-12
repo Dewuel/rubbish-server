@@ -28,6 +28,7 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
     }
   }, {
-    tableName: 'role'
+    tableName: 'role',
+    freezeTableName: true
   });
 };

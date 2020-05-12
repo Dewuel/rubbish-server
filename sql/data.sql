@@ -32,7 +32,6 @@ create table `record`(
 create table `integral`(
   `id` int auto_increment not null,
   `category_id` int not null,
-  `category_color` varchar(32) not null,
   `integral_base` int not null,
   `createdAt` timestamp not null default current_timestamp comment '创建时间',
   `updatedAt` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
@@ -44,6 +43,7 @@ create table `category`(
   `id` int auto_increment not null,
   `category_name` varchar(32) not null,
   `category_type` int not null,
+  `category_color` varchar(32) not null,
   `createdAt` timestamp not null default current_timestamp comment '创建时间',
   `updatedAt` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
   primary key(`id`),
@@ -105,6 +105,7 @@ create table `admin`(
   `id` int auto_increment not null,
   `role_id` int not null,
   `username` varchar(32) not null,
+  `nickname` varchar(32),
   `password` varchar(64) not null,
   `avatar` varchar(255),
   `admin_status` tinyint not null default 0,

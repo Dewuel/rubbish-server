@@ -39,6 +39,26 @@ class CategoryService {
       }
     })
   }
+
+  async findAllByType(category_type, offset = 0, limit = 10) {
+    return models.category.findAndCountAll({
+      where: {
+        category_type
+      },
+      offset,
+      limit
+    })
+  }
+
+  async findAllByName(category_name, offset = 0, limit = 10) {
+    return models.category.findAndCountAll({
+      where: {
+        category_name
+      },
+      limit,
+      offset
+    })
+  }
 }
 
 export default new CategoryService()

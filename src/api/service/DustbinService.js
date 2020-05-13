@@ -1,3 +1,5 @@
+import { Op } from 'sequelize';
+
 const models = require('../../models')
 
 class DustbinService {
@@ -37,6 +39,28 @@ class DustbinService {
       where: {
         id
       }
+    })
+  }
+
+  async findAllByEstate(estate) {
+    return models.dustbin.findAndCountAll({
+      where: {
+        estate: {
+          [Op.like]: `%${estate}%`
+        }
+      },
+      offset: 0,
+      limit: 10
+    })
+  }
+
+  async findAllByDeviceCode(device_code) {
+    return models.dustbin.findAndCountAll({
+      where: {
+        device_code
+      },
+      offset: 0,
+      limit: 10
     })
   }
 }

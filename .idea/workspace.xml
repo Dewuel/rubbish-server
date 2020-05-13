@@ -20,28 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageCategoryController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageIntegralController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageUserController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/modules/category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/modules/integral.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/modules/member.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageDustbinController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exception/ResultException.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/modules/dustbin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/controller/AdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/AdminController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controller/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/service/AdminService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/AdminService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/service/CategoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/CategoryService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/service/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/UserService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageIntegralController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageIntegralController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/DustbinService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/DustbinService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/IntegralService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/IntegralService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/enums/enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/enum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/integral.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/integral.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/role.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/role.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/modules/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/dustbin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/dustbin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/modules/integral.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/integral.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/ErrorHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ErrorHandle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

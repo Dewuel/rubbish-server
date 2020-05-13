@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true
     },
     estate: {
-      type: DataTypes.INTEGER(11),
+      type: DataTypes.STRING(32),
       allowNull: false
     },
     device_code: {

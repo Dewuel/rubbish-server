@@ -11,6 +11,7 @@ import compose from 'koa-compose'
 import compress from 'koa-compress'
 import onerror from 'koa-onerror'
 import config from './config/index'
+import ErrorHandle from '@/utils/ErrorHandle';
 // import { getJWTPayload } from '@/utils/Utils';
 
 const app = new Koa();
@@ -36,7 +37,8 @@ const middleware = compose([
   cors(),
   helmet(),
   koaJson(),
-  jwt
+  jwt,
+  ErrorHandle
 ])
 app.use(middleware)
 

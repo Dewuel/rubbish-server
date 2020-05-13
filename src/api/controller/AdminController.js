@@ -8,7 +8,6 @@ import fs from 'fs';
 import path from 'path';
 import dayjs from 'dayjs';
 import config from '../../config'
-import UserService from '@/api/service/UserService';
 
 class AdminController {
   async login(ctx) {

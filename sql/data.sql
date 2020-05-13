@@ -61,7 +61,7 @@ create table `garbage`(
 
 create table `dustbin`(
   `id` int auto_increment not null,
-  `estate` int not null,
+  `estate` varchar(32) not null,
   `device_code` varchar(64) not null,
   `address` varchar(255) not null,
   `createdAt` timestamp not null default current_timestamp comment '创建时间',

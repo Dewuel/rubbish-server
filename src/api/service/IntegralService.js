@@ -37,6 +37,26 @@ class IntegralService {
       }
     })
   }
+
+  async findAllById(id, offset = 0, limit = 10) {
+    return models.integral.findAndCountAll({
+      where: {
+        id
+      },
+      offset,
+      limit
+    })
+  }
+
+  async findAllByCategory(category_id, offset = 0, limit = 10) {
+    return models.integral.findAndCountAll({
+      where: {
+        category_id
+      },
+      limit,
+      offset
+    })
+  }
 }
 
 export default new IntegralService();

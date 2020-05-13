@@ -9,7 +9,7 @@ import path from 'path';
 import dayjs from 'dayjs';
 import config from '../../config'
 
-class AdminController {
+class ManageAdminController {
   async login(ctx) {
     const { username, password } = ctx.request.body
     if (!username || !password) {
@@ -258,4 +258,4 @@ class AdminController {
   }
 }
 
-export default new AdminController();
+export default new ManageAdminController();

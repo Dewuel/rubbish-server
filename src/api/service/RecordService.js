@@ -24,6 +24,27 @@ class RecordService {
     })
   }
 
+  async findAll(offset, limit) {
+    return models.record.findAndCountAll({
+      include: [
+        {
+          model: models.user,
+          attributes: ['category_name']
+        },
+        {
+          model: models.dustbin,
+          attributes: ['category_name']
+        },
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
+      offset,
+      limit
+    })
+  }
+
   async findByUserId(userId, offset = 0, limit = 10) {
     return models.record.findAndCountAll({
       where: {
@@ -67,6 +88,30 @@ class RecordService {
           attributes: ['category_name']
         }
       ],
+    })
+  }
+
+  async findAllByRecordNum(recordNum) {
+    return models.record.findAndCountAll({
+      where: {
+        record_num: recordNum
+      },
+      include: [
+        {
+          model: models.user,
+          attributes: ['category_name']
+        },
+        {
+          model: models.dustbin,
+          attributes: ['category_name']
+        },
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
+      offset: 0,
+      limit: 10
     })
   }
 

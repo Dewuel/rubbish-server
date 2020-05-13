@@ -20,20 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageDustbinController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exception/ResultException.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/modules/dustbin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageArticleController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageRecordController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/modules/article.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/modules/record.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controller/AdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/AdminController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageIntegralController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageIntegralController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/service/DustbinService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/DustbinService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/service/IntegralService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/IntegralService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enums/enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/enum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/dustbin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/dustbin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/modules/integral.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/integral.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ErrorHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ErrorHandle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/AdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageAdminController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/RecordService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/RecordService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/modules/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/admin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +85,7 @@
       <workItem from="1589192597682" duration="3531000" />
       <workItem from="1589200014237" duration="28691000" />
       <workItem from="1589284403234" duration="13181000" />
+      <workItem from="1589378221218" duration="8137000" />
     </task>
     <servers />
   </component>
@@ -136,13 +133,17 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1352" height="257" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588955386131" />
-    <state x="736" y="244" key="RollbackChangesDialog" timestamp="1589117088021">
+    <state x="736" y="244" key="RollbackChangesDialog" timestamp="1589370051413">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="736" y="244" key="RollbackChangesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1589117088021" />
+    <state x="736" y="244" key="RollbackChangesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1589370051413" />
     <state x="498" y="169" key="SettingsEditor" timestamp="1588947529520">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="498" y="169" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1588947529520" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1589379581558">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1589379581558" />
   </component>
 </project>

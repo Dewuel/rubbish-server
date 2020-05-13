@@ -1,5 +1,5 @@
 import Router from 'koa-router';
-import AdminController from '@/api/controller/AdminController';
+import AdminController from '@/api/controller/ManageAdminController';
 
 const router = new Router();
 router.prefix('/cms/admin');

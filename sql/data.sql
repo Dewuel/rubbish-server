@@ -72,6 +72,7 @@ create table `dustbin`(
 
 create table `hot_article`(
   `id` int auto_increment not null,
+#   `category_id` int not null,
   `title` varchar(255) not null,
   `description` varchar(255) not null,
   `content` text not null,
@@ -123,4 +124,12 @@ create table `role`(
     `updatedAt` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
     primary key(`id`),
     unique key (`role_num`)
+);
+
+create table `image`(
+    `id` int auto_increment not null,
+    `url` varchar(255) not null,
+    `createdAt` timestamp not null default current_timestamp comment '创建时间',
+    `updatedAt` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
+    primary key (`id`)
 );

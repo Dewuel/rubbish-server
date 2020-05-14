@@ -7,11 +7,24 @@ class GarbageService {
   }
 
   async findById(id) {
-    return models.garbage.findByPk(id)
+    return models.garbage.findByPk(id, {
+      include: [
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
+    })
   }
 
   async findAll(offset = 0, limit = 10) {
     return models.garbage.findAndCountAll({
+      include: [
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
       offset,
       limit
     })
@@ -22,6 +35,12 @@ class GarbageService {
       where: {
         id
       },
+      include: [
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
       offset: 0,
       limit: 10
     })
@@ -32,6 +51,12 @@ class GarbageService {
       where: {
         category_id: categoryId
       },
+      include: [
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
       offset,
       limit
     })

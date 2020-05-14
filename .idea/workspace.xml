@@ -20,15 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageGarbageController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/modules/garbage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/controller/ManageArticleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageArticleController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageUserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageMemberController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageGarbageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageGarbageController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageIntegralController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageIntegralController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageRecordController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageRecordController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/service/GarbageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/GarbageService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/service/HotArticleService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/HotArticleService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/IntegralService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/IntegralService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/RecordService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/RecordService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/record.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/record.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/modules/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/modules/member.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/member.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/modules/garbage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/garbage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/modules/integral.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/integral.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/ErrorHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ErrorHandle.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +89,7 @@
       <workItem from="1589200014237" duration="28691000" />
       <workItem from="1589284403234" duration="13181000" />
       <workItem from="1589378221218" duration="8137000" />
+      <workItem from="1589468242225" duration="5182000" />
     </task>
     <servers />
   </component>

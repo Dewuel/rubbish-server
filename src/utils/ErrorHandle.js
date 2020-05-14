@@ -2,7 +2,6 @@ import { HttpException } from '@/exception/ResultException';
 import ResultVo from '@/utils/ResultVo';
 export default (ctx, next) => {
   return next().catch((err) => {
-    console.log(err)
     if (err.status === 401) {
       ctx.status = 401
       ctx.body = {

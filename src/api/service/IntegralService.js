@@ -6,7 +6,14 @@ class IntegralService {
   }
 
   async findById(id) {
-    return models.integral.findByPk(id)
+    return models.integral.findByPk(id, {
+      include: [
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
+    })
   }
 
   async findAll(offset = 0, limit = 10) {

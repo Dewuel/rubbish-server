@@ -11,23 +11,23 @@ class ManageGarbageController {
       throw new HttpException(10000, errCode['10000'])
     }
     try {
-      const info = await GarbageService.save({ category_id, garbage_info })
+      const info = await GarbageService.save({ categoryId: category_id, garbage_info })
       ctx.body = ResultVo.success(info)
     } catch (e) {
-      throw new HttpException(10001, errCode['10001'])
+      throw new HttpException(10001, e)
     }
   }
 
   async findAll(ctx) {
     let { offset, limit } = ctx.request.query
     if (!offset) {
-      offset = 0
+      offset = 1
     }
     if (!limit) {
       limit = 10
     }
     try {
-      const list = await GarbageService.findAll(toInt(offset), toInt(limit))
+      const list = await GarbageService.findAll(toInt(offset) - 1, toInt(limit))
       ctx.body = ResultVo.success(list)
     } catch (e) {
       throw new HttpException(10016, errCode['10016'])
@@ -73,16 +73,31 @@ class ManageGarbageController {
   }
 
   async searchByCategory(ctx) {
-    const { category_id, offset, limit } = ctx.request.query
+    let { category_id, offset, limit } = ctx.request.query
     if (!category_id) {
       throw new HttpException(10000, errCode['10000'])
     }
+    if (!offset) {
+      offset = 1
+    }
+    if (!limit) {
+      limit = 10
+    }
     try {
-      const list = await GarbageService.findAllByCategoryId(category_id, toInt(offset), toInt(limit))
+      const list = await GarbageService.findAllByCategoryId(category_id, toInt(offset) - 1, toInt(limit))
       ctx.body = ResultVo.success(list)
     } catch (e) {
       throw new HttpException(10016, errCode['10016'])
     }
+  }
+
+  async findById(ctx) {
+    const { id } = ctx.params
+    if (!id) {
+      throw new HttpException(10000, errCode['10000'])
+    }
+    const result = await GarbageService.findById(id)
+    ctx.body = ResultVo.success(result)
   }
 }
 

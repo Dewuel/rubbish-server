@@ -2,6 +2,7 @@ import IntegralService from '@/api/service/IntegralService';
 import ResultVo from '@/utils/ResultVo';
 import { errCode } from '@/enums/enum';
 import { toInt } from '@/utils/Utils';
+import { HttpException } from '@/exception/ResultException';
 
 class ManageIntegralController {
   async create(ctx) {
@@ -19,12 +20,12 @@ class ManageIntegralController {
     let { offset, limit } = ctx.request.query
 
     if (!offset) {
-      offset = 0
+      offset = 1
     }
     if (!limit) {
       limit = 10
     }
-    const list = await IntegralService.findAll(toInt(offset), toInt(limit))
+    const list = await IntegralService.findAll(toInt(offset) - 1, toInt(limit))
     ctx.body = ResultVo.success(list)
   }
 
@@ -77,6 +78,15 @@ class ManageIntegralController {
     }
     const list = await IntegralService.findAllById(category_id)
     ctx.body = ResultVo.success(list)
+  }
+
+  async findById(ctx) {
+    const { id } = ctx.params
+    if (!id) {
+      throw new HttpException(10000, errCode['10000'])
+    }
+    const result = await IntegralService.findById(id)
+    ctx.body = ResultVo.success(result)
   }
 }
 

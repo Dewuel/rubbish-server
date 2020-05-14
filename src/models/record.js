@@ -39,7 +39,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(32),
       allowNull: false
     },
-    category_id: {
+    categoryId: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       field: 'category_id',

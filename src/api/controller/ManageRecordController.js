@@ -9,12 +9,12 @@ class ManageRecordController {
     let { offset, limit } = ctx.request.query
 
     if (!offset) {
-      offset = 0
+      offset = 1
     }
     if (!limit) {
       limit = 10
     }
-    const list = await RecordService.findAll(toInt(offset), toInt(limit))
+    const list = await RecordService.findAll(toInt(offset) - 1, toInt(limit))
     ctx.body = ResultVo.success(list)
   }
 
@@ -62,7 +62,7 @@ class ManageRecordController {
 
   async findAllByCategory(ctx) {
     let { category_id, offset, limit } = ctx.request.query
-    if (category_id) {
+    if (!category_id) {
       throw new HttpException(10000, errCode['10000'])
     }
     if (!offset) {

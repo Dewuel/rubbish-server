@@ -21,12 +21,12 @@ class ManageArticleController {
     let { offset, limit } = ctx.request.query
 
     if (!offset) {
-      offset = 0
+      offset = 1
     }
     if (!limit) {
       limit = 10
     }
-    const list = await HotArticleService.findAll(toInt(offset), toInt(limit))
+    const list = await HotArticleService.findAll(toInt(offset) - 1, toInt(limit))
     ctx.body = ResultVo.success(list)
   }
 
@@ -49,6 +49,7 @@ class ManageArticleController {
       throw new HttpException(10000, errCode['10000'])
     }
     const result = await HotArticleService.delete(id)
+    console.log(id, result)
     if (result < 1) {
       throw new HttpException(10014, errCode['10014'])
     }
@@ -71,13 +72,23 @@ class ManageArticleController {
       throw new HttpException(10000, errCode['10000'])
     }
     if (!offset) {
-      offset = 0
+      offset = 1
     }
     if (!limit) {
       limit = 10
     }
-    const list = await HotArticleService.findAllByTitle(title, toInt(offset), toInt(limit))
+    const list = await HotArticleService.findAllByTitle(title, toInt(offset) - 1, toInt(limit))
     ctx.body = ResultVo.success(list)
+  }
+
+  async findById(ctx) {
+    const { id } = ctx.params
+
+    if (!id) {
+      throw new HttpException(10000, errCode['10000'])
+    }
+    const result = await HotArticleService.findById(id)
+    ctx.body = ResultVo.success(result)
   }
 }
 

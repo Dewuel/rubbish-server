@@ -10,11 +10,11 @@ class RecordService {
       include: [
         {
           model: models.user,
-          attributes: ['category_name']
+          attributes: ['email']
         },
         {
           model: models.dustbin,
-          attributes: ['category_name']
+          attributes: ['device_code']
         },
         {
           model: models.category,
@@ -29,11 +29,11 @@ class RecordService {
       include: [
         {
           model: models.user,
-          attributes: ['category_name']
+          attributes: ['email']
         },
         {
           model: models.dustbin,
-          attributes: ['category_name']
+          attributes: ['device_code']
         },
         {
           model: models.category,
@@ -53,11 +53,11 @@ class RecordService {
       include: [
         {
           model: models.user,
-          attributes: ['category_name']
+          attributes: ['email']
         },
         {
           model: models.dustbin,
-          attributes: ['category_name']
+          attributes: ['device_code']
         },
         {
           model: models.category,
@@ -77,11 +77,11 @@ class RecordService {
       include: [
         {
           model: models.user,
-          attributes: ['category_name']
+          attributes: ['email']
         },
         {
           model: models.dustbin,
-          attributes: ['category_name']
+          attributes: ['device_code']
         },
         {
           model: models.category,
@@ -99,11 +99,11 @@ class RecordService {
       include: [
         {
           model: models.user,
-          attributes: ['category_name']
+          attributes: ['email']
         },
         {
           model: models.dustbin,
-          attributes: ['category_name']
+          attributes: ['device_code']
         },
         {
           model: models.category,
@@ -123,11 +123,11 @@ class RecordService {
       include: [
         {
           model: models.user,
-          attributes: ['category_name']
+          attributes: ['email']
         },
         {
           model: models.dustbin,
-          attributes: ['category_name']
+          attributes: ['device_code']
         },
         {
           model: models.category,
@@ -147,11 +147,11 @@ class RecordService {
       include: [
         {
           model: models.user,
-          attributes: ['category_name']
+          attributes: ['email']
         },
         {
           model: models.dustbin,
-          attributes: ['category_name']
+          attributes: ['device_code']
         },
         {
           model: models.category,

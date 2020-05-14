@@ -6,6 +6,7 @@ router.prefix('/cms/garbage')
 
 router.post('/create', ManageGarbageController.create)
 router.get('/list', ManageGarbageController.findAll)
+router.get('/findOne/:id', ManageGarbageController.findById)
 router.put('/update/:id', ManageGarbageController.update)
 router.delete('/delete/:id', ManageGarbageController.delete)
 router.get('/searchById', ManageGarbageController.searchById)

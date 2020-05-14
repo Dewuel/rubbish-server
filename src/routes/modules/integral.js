@@ -5,6 +5,7 @@ router.prefix('/cms/integral')
 
 router.post('/create', ManageIntegralController.create)
 router.get('/list', ManageIntegralController.findAll)
+router.get('/findOne/:id', ManageIntegralController.findById)
 router.put('/update/:id', ManageIntegralController.updateIntegral)
 router.delete('/delete/:id', ManageIntegralController.deleteIntegral)
 router.get('/searchById', ManageIntegralController.searchById)

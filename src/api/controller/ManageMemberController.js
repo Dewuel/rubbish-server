@@ -3,7 +3,7 @@ import ResultVo from '@/utils/ResultVo';
 import { errCode } from '@/enums/enum';
 import { toInt } from '@/utils/Utils';
 
-class ManageUserController {
+class ManageMemberController {
   async findAllUser(ctx) {
     const { offset, limit } = ctx.request.query
     const list = await UserService.findAllUser(toInt(offset - 1), toInt(limit))
@@ -61,4 +61,4 @@ class ManageUserController {
     ctx.body = ResultVo.success(info)
   }
 }
-export default new ManageUserController();
+export default new ManageMemberController();

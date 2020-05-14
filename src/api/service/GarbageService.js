@@ -17,6 +17,16 @@ class GarbageService {
     })
   }
 
+  async findAllById(id) {
+    return models.garbage.findAndCountAll({
+      where: {
+        id
+      },
+      offset: 0,
+      limit: 10
+    })
+  }
+
   async findAllByCategoryId(categoryId, offset = 0, limit = 10) {
     return models.garbage.findAndCountAll({
       where: {

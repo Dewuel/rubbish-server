@@ -29,6 +29,16 @@ class HotArticleService {
     })
   }
 
+  async findAllById(id) {
+    return models.hot_article.findAndCountAll({
+      where: {
+        id
+      },
+      offset: 0,
+      limit: 10
+    })
+  }
+
   async update(id, data) {
     return models.hot_article.update(data, {
       where: {

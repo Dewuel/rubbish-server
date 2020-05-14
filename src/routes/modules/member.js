@@ -1,5 +1,5 @@
 import Router from 'koa-router';
-import ManageUserController from '@/api/controller/ManageUserController';
+import ManageUserController from '@/api/controller/ManageMemberController';
 
 const router = new Router();
 router.prefix('/cms/user');

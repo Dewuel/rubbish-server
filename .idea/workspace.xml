@@ -20,16 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageArticleController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageRecordController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/modules/article.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/modules/record.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageGarbageController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/modules/garbage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controller/AdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageAdminController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/service/RecordService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/RecordService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/modules/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageArticleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageArticleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageUserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageMemberController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/GarbageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/GarbageService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/HotArticleService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/HotArticleService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/modules/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/modules/member.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/member.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,9 +140,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="498" y="169" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1588947529520" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1589379581558">
+    <state x="616" y="243" key="run.anything.popup" timestamp="1589419575939">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1589379581558" />
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1589419575939" />
   </component>
 </project>

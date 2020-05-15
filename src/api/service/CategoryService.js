@@ -59,6 +59,10 @@ class CategoryService {
       offset
     })
   }
+
+  async findAllCategory() {
+    return models.category.findAll()
+  }
 }
 
 export default new CategoryService()

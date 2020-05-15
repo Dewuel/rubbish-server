@@ -39,6 +39,10 @@ class RoleService {
       }
     })
   }
+
+  async findAllRole() {
+    return models.role.findAll()
+  }
 }
 
 export default new RoleService();

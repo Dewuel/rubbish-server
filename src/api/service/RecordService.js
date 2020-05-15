@@ -178,6 +178,26 @@ class RecordService {
       }
     });
   }
+
+  async findAllByEmail(userId, offset, limit) {
+    return models.record.findAndCountAll({
+      where: {
+        userId
+      },
+      include: [
+        {
+          model: models.dustbin,
+          attributes: ['device_code']
+        },
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
+      limit,
+      offset,
+    })
+  }
 }
 
 export default new RecordService();

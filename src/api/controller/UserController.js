@@ -10,6 +10,7 @@ import jsonwebtoken from 'jsonwebtoken';
 import fs from 'fs'
 import path from 'path'
 import config from '../../config'
+import { HttpException } from '@/exception/ResultException';
 
 class UserController {
   async getCode(ctx) {
@@ -65,7 +66,6 @@ class UserController {
         name: user.name,
         email: user.email
       }, config.JWT_SECRET, { expiresIn: 864000 })
-      console.log('user: ', user)
       const response = {
         id: user.id,
         email: user.email,
@@ -112,13 +112,22 @@ class UserController {
       return
     }
     const res = await UserService.updateUser(id, body)
-    console.log(res)
+    if (res < 1) {
+      throw new HttpException(10013, errCode['10013'])
+    }
+    ctx.body = ResultVo.successNull()
+  }
+
+  async getUserInfo(ctx) {
+    const { id } = ctx.state.user
+    const result = await UserService.findById(id)
+    ctx.body = ResultVo.success(result)
   }
 
   async changeAvatar(ctx) {
     const { file } = ctx.request.files;
     const reader = fs.createReadStream(file.path)
-    const filePath = path.join(__dirname, 'public/upload', `${dayjs().format('YYYY-MM-dd')}-${file.name}`);
+    const filePath = path.join('public/static/upload', `${dayjs().format('YYYY-MM-dd')}-${file.name}`);
     const writeStream = fs.createWriteStream(filePath)
     reader.pipe(writeStream)
     console.log(filePath)

@@ -1,16 +1,17 @@
 import DustbinService from '@/api/service/DustbinService';
 import ResultVo from '@/utils/ResultVo';
 import { errCode } from '@/enums/enum';
-import { toInt } from '@/utils/Utils';
+import { randomNum, toInt } from '@/utils/Utils';
 import { HttpException } from '@/exception/ResultException';
 
 class ManageDustbinController {
   async create(ctx) {
-    const { estate, device_code, address } = ctx.request.body
-    if (!estate || !device_code || !address) {
+    const { estate, address } = ctx.request.body
+    if (!estate || !address) {
       ctx.body = ResultVo.fail(10000, errCode['10000'])
       return
     }
+    const device_code = randomNum()
     const info = await DustbinService.save({ estate, device_code, address })
     if (!info) {
       ctx.body = ResultVo.fail(10001, errCode['10001'])

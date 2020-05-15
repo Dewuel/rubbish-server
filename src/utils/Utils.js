@@ -23,9 +23,29 @@ const toInt = num => {
   return Number(num) || 0
 }
 
+const randomNum = () => {
+  const len = 16
+  const chr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+  const maxLength = chr.length
+  let str
+  for (let i = 0; i < len; i++) {
+    str = chr.charAt(Math.floor(Math.random() * maxLength))
+  }
+  return str
+}
+
+const randomRecord = () => {
+  const chr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+  const str = chr.charAt(Math.floor(Math.random() * chr.length))
+  const date = new Date().getTime()
+  return str.concat(date.toString())
+}
+
 export {
   checkCode,
   getJWTPayload,
   genToken,
-  toInt
+  toInt,
+  randomNum,
+  randomRecord
 }

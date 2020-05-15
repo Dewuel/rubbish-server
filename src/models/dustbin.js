@@ -12,6 +12,15 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(32),
       allowNull: false
     },
+    categoryId: {
+      type: DataTypes.INTEGER(11),
+      allowNull: false,
+      field: 'category_id',
+      references: {
+        model: 'category',
+        key: 'id'
+      }
+    },
     device_code: {
       type: DataTypes.STRING(64),
       allowNull: false,

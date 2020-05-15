@@ -27,9 +27,9 @@ const randomNum = () => {
   const len = 16
   const chr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
   const maxLength = chr.length
-  let str
+  let str = ''
   for (let i = 0; i < len; i++) {
-    str = chr.charAt(Math.floor(Math.random() * maxLength))
+    str = str.concat(chr.charAt(Math.floor(Math.random() * maxLength)))
   }
   return str
 }

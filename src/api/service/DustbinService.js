@@ -1,6 +1,5 @@
 import { Op } from 'sequelize';
-
-const models = require('../../models')
+import models from '../../models'
 
 class DustbinService {
   async save(data) {
@@ -8,19 +7,38 @@ class DustbinService {
   }
 
   async findById(id) {
-    return models.dustbin.findByPk(id)
+    return models.dustbin.findByPk(id, {
+      include: [
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ]
+    })
   }
 
   async findByDeviceCode(deviceCode) {
     return models.dustbin.findOne({
       where: {
         device_code: deviceCode
-      }
+      },
+      include: [
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ]
     })
   }
 
   async findAll(offset = 0, limit = 10) {
     return models.dustbin.findAndCountAll({
+      include: [
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
       offset,
       limit
     })
@@ -30,7 +48,7 @@ class DustbinService {
     return models.dustbin.update(data, {
       where: {
         id
-      }
+      },
     })
   }
 
@@ -49,6 +67,12 @@ class DustbinService {
           [Op.like]: `%${estate}%`
         }
       },
+      include: [
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
       offset: 0,
       limit: 10
     })
@@ -59,6 +83,12 @@ class DustbinService {
       where: {
         device_code
       },
+      include: [
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
       offset: 0,
       limit: 10
     })

@@ -6,13 +6,14 @@ import { HttpException } from '@/exception/ResultException';
 
 class ManageDustbinController {
   async create(ctx) {
-    const { estate, address } = ctx.request.body
-    if (!estate || !address) {
+    const { estate, category_id, address } = ctx.request.body
+    console.log(estate, category_id, address)
+    if (!estate || !address || !category_id) {
       ctx.body = ResultVo.fail(10000, errCode['10000'])
       return
     }
     const device_code = randomNum()
-    const info = await DustbinService.save({ estate, device_code, address })
+    const info = await DustbinService.save({ estate, device_code, address, categoryId: category_id })
     if (!info) {
       ctx.body = ResultVo.fail(10001, errCode['10001'])
       return
@@ -23,12 +24,12 @@ class ManageDustbinController {
   async findAll(ctx) {
     let { offset, limit } = ctx.request.query
     if (!offset) {
-      offset = 0
+      offset = 1
     }
     if (!limit) {
       limit = 10
     }
-    const list = await DustbinService.findAll(toInt(offset), toInt(limit))
+    const list = await DustbinService.findAll(toInt(offset) - 1, toInt(limit))
     ctx.body = ResultVo.success(list)
   }
 
@@ -77,7 +78,16 @@ class ManageDustbinController {
     if (!device_code) {
       throw new HttpException(10000, errCode['10000'])
     }
-    const result = await DustbinService.findByDeviceCode(device_code)
+    const result = await DustbinService.findAllByDeviceCode(device_code)
+    ctx.body = ResultVo.success(result)
+  }
+
+  async findById(ctx) {
+    const { id } = ctx.params
+    if (!id) {
+      throw new HttpException(10000, errCode['10000'])
+    }
+    const result = await DustbinService.findById(id)
     ctx.body = ResultVo.success(result)
   }
 }

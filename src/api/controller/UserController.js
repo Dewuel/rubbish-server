@@ -5,12 +5,13 @@ import bcrypt from 'bcrypt';
 import send from '@/config/MailConfig';
 import dayjs from 'dayjs';
 import { setValue } from '@/config/RedisConfig';
-import { checkCode } from '@/utils/Utils';
+import { checkCode, toInt } from '@/utils/Utils';
 import jsonwebtoken from 'jsonwebtoken';
 import fs from 'fs'
 import path from 'path'
 import config from '../../config'
 import { HttpException } from '@/exception/ResultException';
+import RecordService from '@/api/service/RecordService';
 
 class UserController {
   async getCode(ctx) {
@@ -104,14 +105,10 @@ class UserController {
   }
 
   async changeUserInfo(ctx) {
-    const { id } = ctx.params;
+    const { email } = ctx.state.user;
     const { body } = ctx.request;
 
-    if (!id) {
-      ctx.body = ResultVo.fail(10000, errCode[10000])
-      return
-    }
-    const res = await UserService.updateUser(id, body)
+    const res = await UserService.updateUser(email, body)
     if (res < 1) {
       throw new HttpException(10013, errCode['10013'])
     }
@@ -131,6 +128,19 @@ class UserController {
     const writeStream = fs.createWriteStream(filePath)
     reader.pipe(writeStream)
     console.log(filePath)
+  }
+
+  async getRecord(ctx) {
+    const { id } = ctx.state.user
+    let { offset, limit } = ctx.request.params
+    if (!offset) {
+      offset = 1
+    }
+    if (!limit) {
+      limit = 10
+    }
+    const list = await RecordService.findByUserId(id, toInt(offset) - 1, limit)
+    ctx.body = ResultVo.success(list)
   }
 }
 

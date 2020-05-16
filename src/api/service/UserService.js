@@ -52,18 +52,18 @@ class UserService {
     })
   }
 
-  async updateUser(id, data) {
+  async updateUser(email, data) {
     return models.user.update(data, {
       where: {
-        id
+        email
       }
     })
   }
 
-  async delete(id) {
+  async delete(email) {
     return models.user.destroy({
       where: {
-        id
+        email
       }
     })
   }

@@ -21,13 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageDustbinController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageDustbinController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/service/DustbinService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/DustbinService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/dustbin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/dustbin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/modules/dustbin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/dustbin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +78,7 @@
       <workItem from="1589284403234" duration="13181000" />
       <workItem from="1589378221218" duration="8137000" />
       <workItem from="1589468242225" duration="5182000" />
+      <workItem from="1589604312302" duration="2336000" />
     </task>
     <servers />
   </component>
@@ -132,10 +126,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1352" height="257" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588955386131" />
-    <state x="736" y="244" key="RollbackChangesDialog" timestamp="1589519823561">
+    <state x="736" y="244" key="RollbackChangesDialog" timestamp="1589604318433">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="736" y="244" key="RollbackChangesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1589519823561" />
+    <state x="736" y="244" key="RollbackChangesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1589604318433" />
     <state x="498" y="169" key="SettingsEditor" timestamp="1588947529520">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

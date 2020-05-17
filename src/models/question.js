@@ -12,7 +12,19 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(255),
       allowNull: false
     },
-    answers: {
+    A: {
+      type: DataTypes.STRING(255),
+      allowNull: false
+    },
+    B: {
+      type: DataTypes.STRING(255),
+      allowNull: false
+    },
+    C: {
+      type: DataTypes.STRING(255),
+      allowNull: false
+    },
+    D: {
       type: DataTypes.STRING(255),
       allowNull: false
     },
@@ -22,6 +34,10 @@ module.exports = function(sequelize, DataTypes) {
     },
     add_count: {
       type: DataTypes.INTEGER(11),
+      allowNull: false
+    },
+    describe: {
+      type: DataTypes.STRING(255),
       allowNull: false
     },
     createdAt: {

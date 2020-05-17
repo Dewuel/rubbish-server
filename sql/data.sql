@@ -95,9 +95,13 @@ create table `knowledge`(
 create table `question`(
   `id` int auto_increment not null,
   `content` varchar(255) not null,
-  `answers` varchar(255) not null,
+  `A` varchar(255) not null,
+  `B` varchar(255) not null,
+  `C` varchar(255) not null,
+  `D` varchar(255) not null,
   `correct` varchar(4) not null,
   `add_count` int not null,
+  `describe` varchar(255) not null,
   `createdAt` timestamp not null default current_timestamp comment '创建时间',
   `updatedAt` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
   primary key(`id`)

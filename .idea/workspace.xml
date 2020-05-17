@@ -20,13 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageImageController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/service/ImageService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/modules/image.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controller/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/service/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/UserService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/modules/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageImageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageImageController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/QuestionService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/QuestionService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/modules/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +85,8 @@
       <workItem from="1589378221218" duration="8137000" />
       <workItem from="1589468242225" duration="5182000" />
       <workItem from="1589604312302" duration="2336000" />
+      <workItem from="1589646930317" duration="101000" />
+      <workItem from="1589719831710" duration="7567000" />
     </task>
     <servers />
   </component>

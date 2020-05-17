@@ -9,7 +9,7 @@ class QuestionService {
     return models.question.findByPk(id)
   }
 
-  async findAll(offset = 0, limit = 10) {
+  async findAll(offset, limit) {
     return models.question.findAndCountAll({
       offset,
       limit

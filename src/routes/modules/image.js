@@ -4,6 +4,7 @@ const router = new Router();
 router.prefix('/cms/swiper')
 
 router.post('/create', ManageImageController.create)
-router.get('findAll', ManageImageController.findAll)
+router.get('/findAll', ManageImageController.findAll)
 router.delete('/delete/:id', ManageImageController.delete)
+
 export default router;

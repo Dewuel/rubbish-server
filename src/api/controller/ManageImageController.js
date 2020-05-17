@@ -1,32 +1,44 @@
 import ResultVo from '@/utils/ResultVo';
 import { errCode } from '@/enums/enum';
-import { toInt } from '@/utils/Utils';
+import { genFileName, toInt } from '@/utils/Utils';
 import { HttpException } from '@/exception/ResultException';
 import fs from 'fs'
 import path from 'path'
-import dayjs from 'dayjs';
 import ImageService from '@/api/service/ImageService';
+import config from '@/config'
 
 class ManageImageController {
   async create(ctx) {
     const { file } = ctx.request.files
     const reader = fs.createReadStream(file.path)
-    const filePath = path.join(`public/static/upload${dayjs().date()}${file.name}`)
+    const filePath = path.join(`public/static/upload/${genFileName()}.${file.name.split('.')[1]}`)
     const write = fs.createWriteStream(filePath)
     reader.pipe(write)
-    console.log(filePath)
+    const url = path.join('/static/upload', path.basename(filePath))
+    const _img = url.replace(/\\/g, '/')
+    try {
+      const result = await ImageService.save({ url: _img })
+      ctx.body = ResultVo.success(result)
+    } catch (e) {
+      throw new HttpException(10001, errCode['10001'])
+    }
   }
 
   async findAll(ctx) {
     let { offset, limit } = ctx.request.query
+    console.log(offset, limit)
     if (!offset) {
       offset = 1
     }
     if (!limit) {
       limit = 10
     }
-
-    const list = await ImageService.findAllWithPage(toInt(offset) - 1, limit)
+    const list = await ImageService.findAllWithPage(toInt(offset) - 1, toInt(limit))
+    // const response = {
+    //   data: list,
+    //   baseUrl: config.baseUrl
+    // }
+    list.baseUrl = config.baseUrl
     ctx.body = ResultVo.success(list)
   }
 

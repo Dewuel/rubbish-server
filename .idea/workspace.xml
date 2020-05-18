@@ -20,13 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/controller/ManageQuestionController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/modules/question.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageImageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageImageController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageArticleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageArticleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/HotArticleService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/HotArticleService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/service/QuestionService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/QuestionService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/modules/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/hot_article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/hot_article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/modules/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/article.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +59,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="ts.external.directory.path" value="C:\Document\Soft\IntelliJIDEA\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -86,7 +89,8 @@
       <workItem from="1589468242225" duration="5182000" />
       <workItem from="1589604312302" duration="2336000" />
       <workItem from="1589646930317" duration="101000" />
-      <workItem from="1589719831710" duration="7567000" />
+      <workItem from="1589719831710" duration="7603000" />
+      <workItem from="1589804365581" duration="11915000" />
     </task>
     <servers />
   </component>

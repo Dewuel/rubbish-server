@@ -1,16 +1,25 @@
 import ResultVo from '@/utils/ResultVo';
 import { errCode } from '@/enums/enum';
-import { toInt } from '@/utils/Utils';
+import { genFileName, toInt } from '@/utils/Utils';
 import { HttpException } from '@/exception/ResultException';
 import HotArticleService from '@/api/service/HotArticleService';
+import fs from 'fs'
+import path from 'path'
 
 class ManageArticleController {
   async create(ctx) {
     const { title, description, origin, content } = ctx.request.body
+    const { file } = ctx.request.files
     if (!title || !description || !origin || !content) {
       throw new HttpException(10000, errCode['10000'])
     }
-    const result = await HotArticleService.save({ title, description, origin, content })
+    const reader = fs.createReadStream(file.path)
+    const filePath = path.join('public/static/upload', `/${genFileName()}.${file.name.split('.')[1]}`)
+    const write = fs.createWriteStream(filePath)
+    reader.pipe(write)
+    const url = path.join('/static/upload', path.basename(filePath))
+    const image = url.replace(/\\/g, '/')
+    const result = await HotArticleService.save({ title, image, description, origin, content })
     if (!result) {
       throw new HttpException(10001, errCode['10001'])
     }
@@ -33,10 +42,23 @@ class ManageArticleController {
   async update(ctx) {
     const { id } = ctx.params
     const data = ctx.request.body
+    const { file } = ctx.request.files
     if (!id) {
       throw new HttpException(10000, errCode['10000'])
     }
-    const result = await HotArticleService.update(id, data)
+    let result;
+    if (file) {
+      const reader = fs.createReadStream(file.path)
+      const filePath = path.join('public/static/upload', `/${genFileName()}.${file.name.split('.')[1]}`)
+      const write = fs.createWriteStream(filePath)
+      reader.pipe(write)
+      const url = path.join('/static/upload', path.basename(filePath))
+      data.image = url.replace(/\\/g, '/')
+      result = await HotArticleService.update(id, data)
+    } else {
+      result = await HotArticleService.update(id, data)
+    }
+
     if (result < 1) {
       throw new HttpException(10013, errCode['10013'])
     }

@@ -1,4 +1,5 @@
 import models from '../../models'
+import Sequelize from 'sequelize';
 
 class QuestionService {
   async save(data) {
@@ -13,6 +14,23 @@ class QuestionService {
     return models.question.findAndCountAll({
       offset,
       limit
+    })
+  }
+
+  async findAllById(id, offset, limit) {
+    return models.question.findAndCountAll({
+      where: {
+        id
+      },
+      offset,
+      limit
+    })
+  }
+
+  async randomQuestion() {
+    return models.question.findAll({
+      order: [[Sequelize.literal('RAND()')]],
+      limit: 10
     })
   }
 

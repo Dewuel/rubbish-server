@@ -73,7 +73,8 @@ create table `dustbin`(
 
 create table `hot_article`(
   `id` int auto_increment not null,
-#   `category_id` int not null,
+  `image` varchar(64) not null,
+  `stick` tinyint not null default 0 comment '0:未置顶，1：置顶',
   `title` varchar(255) not null,
   `description` varchar(255) not null,
   `content` text not null,

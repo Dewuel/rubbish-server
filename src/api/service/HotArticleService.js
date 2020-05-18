@@ -10,10 +10,11 @@ class HotArticleService {
     return models.hot_article.findByPk(id)
   }
 
-  async findAll(offset = 0, limit = 0) {
+  async findAll(offset = 0, limit = 10) {
     return models.hot_article.findAndCountAll({
       offset,
-      limit
+      limit,
+      order: [['id', 'DESC']]
     })
   }
 
@@ -35,7 +36,7 @@ class HotArticleService {
         id
       },
       offset: 0,
-      limit: 10
+      limit: 10,
     })
   }
 
@@ -52,6 +53,32 @@ class HotArticleService {
       where: {
         id
       }
+    })
+  }
+
+  async stick(id) {
+    return models.hot_article.update({ stick: 1 }, {
+      where: {
+        id
+      }
+    })
+  }
+
+  async disStick(id) {
+    return models.hot_article.update({ stick: 0 }, {
+      where: {
+        id
+      }
+    })
+  }
+
+  getAllByStick() {
+    return models.hot_article.findAll({
+      where: {
+        stick: 1
+      },
+      limit: 10,
+      order: [['id', 'DESC']]
     })
   }
 }

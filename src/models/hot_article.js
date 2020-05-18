@@ -8,6 +8,15 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
+    stick: {
+      type: DataTypes.INTEGER(4),
+      allowNull: false,
+      defaultValue: 0
+    },
+    image: {
+      type: DataTypes.STRING(64),
+      allowNull: false
+    },
     title: {
       type: DataTypes.STRING(255),
       allowNull: false

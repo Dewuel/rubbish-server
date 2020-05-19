@@ -8,7 +8,7 @@ const JWT_SECRET =
 
 const baseUrl =
   process.env.NODE_ENV === 'production'
-    ? 'http://refuse.aiyund.top'
+    ? 'http://api.aiyund.top'
     : 'http://localhost:5000'
 
 export default {

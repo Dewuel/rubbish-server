@@ -17,5 +17,13 @@ router.post('/changePass', UserController.changePass)
 router.post('/updateUserInfo', UserController.changeUserInfo)
 router.get('/userInfo', UserController.getUserInfo)
 router.get('/recordList', UserController.getRecord)
+router.get('/hotArticles', UserController.getNewArticles)
+router.get('/swiper', UserController.getSwiper)
+router.get('/dustbin', UserController.getDustbin)
+router.get('/category', UserController.getCategory)
+router.get('/questions', UserController.getQuestion)
+router.post('/createRecord', UserController.createRecord)
+router.get('/searchGarbage', UserController.searchGarbage)
+router.post('/addIntegral', UserController.addIntegral)
 
 export default router;

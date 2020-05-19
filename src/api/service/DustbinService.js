@@ -31,6 +31,17 @@ class DustbinService {
     })
   }
 
+  async findAllNoPage() {
+    return models.dustbin.findAll({
+      include: [
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
+    })
+  }
+
   async findAll(offset = 0, limit = 10) {
     return models.dustbin.findAndCountAll({
       include: [

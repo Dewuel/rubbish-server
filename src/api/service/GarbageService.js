@@ -81,6 +81,23 @@ class GarbageService {
     })
   }
 
+  async findByGarbage(keyword) {
+    models.garbage.findAll({
+      where: {
+        garbage_info: {
+          [Op.like]: `%${keyword}%`
+        }
+      },
+      attributes: ['id', 'garbage_info'],
+      include: [
+        {
+          model: models.category,
+          attributes: ['category_name']
+        }
+      ],
+    })
+  }
+
   async update(id, data) {
     return models.garbage.update(data, {
       where: {

@@ -11,5 +11,7 @@ router.delete('/delete/:id', ManageArticleController.delete)
 router.get('/searchById', ManageArticleController.searchAllById)
 router.get('/searchByTitle', ManageArticleController.searchByTitle)
 router.get('/findOne/:id', ManageArticleController.findById)
+router.get('/stick/:id', ManageArticleController.stickArticle)
+router.get('/disStick/:id', ManageArticleController.disStickArticle)
 
 export default router;

@@ -21,6 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageAdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageAdminController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageArticleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageArticleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/ManageImageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/ManageImageController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/controller/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/UserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/DustbinService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/DustbinService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/GarbageService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/GarbageService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/service/HotArticleService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service/HotArticleService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/modules/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/modules/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/modules/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +93,8 @@
       <workItem from="1589719831710" duration="7603000" />
       <workItem from="1589804365581" duration="11915000" />
       <workItem from="1589854074827" duration="2636000" />
-      <workItem from="1589858028928" duration="696000" />
+      <workItem from="1589858028928" duration="1568000" />
+      <workItem from="1589864898985" duration="6421000" />
     </task>
     <servers />
   </component>

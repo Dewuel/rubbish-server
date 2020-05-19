@@ -72,7 +72,7 @@ class HotArticleService {
     })
   }
 
-  getAllByStick() {
+  async getAllByStick() {
     return models.hot_article.findAll({
       where: {
         stick: 1

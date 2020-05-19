@@ -8,6 +8,7 @@ import fs from 'fs';
 import path from 'path';
 import dayjs from 'dayjs';
 import config from '../../config'
+import { upload } from '@/utils/upload';
 
 class ManageAdminController {
   async login(ctx) {
@@ -205,16 +206,7 @@ class ManageAdminController {
     const file = await ctx.request.files.file
     const payload = ctx.state.user
 
-    const reader = fs.createReadStream(file.path)
-    if (!fs.existsSync(path.join(process.cwd(), 'public/static/upload'))) {
-      fs.mkdirSync(path.join(process.cwd(), 'public/static/upload'), { recursive: true })
-    }
-    const filePath = path.join(process.cwd(), 'public/static/upload', `${dayjs().format('YYYY-MM-DD')}-${file.name}`);
-    const writeStream = fs.createWriteStream(filePath)
-    reader.pipe(writeStream)
-
-    const avatar = path.join('/static/upload', path.basename(filePath))
-    const _avatar = avatar.replace(/\\/g, '/')
+    const _avatar = upload(file)
     const info = await AdminService.updateAdmin(payload.username, { avatar: _avatar })
     if (info < 1) {
       ctx.body = ResultVo.fail(10015, errCode['10015'])

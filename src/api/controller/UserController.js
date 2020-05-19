@@ -5,13 +5,18 @@ import bcrypt from 'bcrypt';
 import send from '@/config/MailConfig';
 import dayjs from 'dayjs';
 import { setValue } from '@/config/RedisConfig';
-import { checkCode, toInt } from '@/utils/Utils';
+import { checkCode, randomRecord, toInt } from '@/utils/Utils';
 import jsonwebtoken from 'jsonwebtoken';
-import fs from 'fs'
-import path from 'path'
 import config from '../../config'
 import { HttpException } from '@/exception/ResultException';
 import RecordService from '@/api/service/RecordService';
+import { upload } from '@/utils/upload';
+import HotArticleService from '@/api/service/HotArticleService';
+import ImageService from '@/api/service/ImageService';
+import DustbinService from '@/api/service/DustbinService';
+import CategoryService from '@/api/service/CategoryService';
+import QuestionService from '@/api/service/QuestionService';
+import GarbageService from '@/api/service/GarbageService';
 
 class UserController {
   async getCode(ctx) {
@@ -23,10 +28,10 @@ class UserController {
         expire: dayjs().add(10, 'minute'),
         email: body.email
       })
-      setValue(body.email, code, 60 * 5)
+      setValue(body.email, code, 60 * 10)
       ctx.body = ResultVo.success(result)
     } catch (e) {
-      console.log(e)
+      throw new HttpException(10017, errCode['10017'])
     }
   }
 
@@ -38,7 +43,6 @@ class UserController {
       return;
     }
     const bool = await checkCode(email, code)
-    console.log('value', bool)
     if (!bool) {
       ctx.body = ResultVo.fail(10003, errCode['10003'])
       return
@@ -123,16 +127,18 @@ class UserController {
 
   async changeAvatar(ctx) {
     const { file } = ctx.request.files;
-    const reader = fs.createReadStream(file.path)
-    const filePath = path.join('public/static/upload', `${dayjs().format('YYYY-MM-dd')}-${file.name}`);
-    const writeStream = fs.createWriteStream(filePath)
-    reader.pipe(writeStream)
-    console.log(filePath)
+    const { email } = ctx.state.user
+    const image = upload(file)
+    const result = await UserService.updateUser(email, { avatar: image })
+    if (result < 1) {
+      throw new HttpException(10013, errCode['10013'])
+    }
+    ctx.body = ResultVo.successNull()
   }
 
   async getRecord(ctx) {
     const { id } = ctx.state.user
-    let { offset, limit } = ctx.request.params
+    let { offset, limit } = ctx.request.query
     if (!offset) {
       offset = 1
     }
@@ -141,6 +147,72 @@ class UserController {
     }
     const list = await RecordService.findByUserId(id, toInt(offset) - 1, limit)
     ctx.body = ResultVo.success(list)
+  }
+
+  async getNewArticles(ctx) {
+    const result = HotArticleService.getAllByStick()
+    ctx.body = ResultVo.success(result)
+  }
+
+  async getSwiper(ctx) {
+    const result = await ImageService.findAll()
+    ctx.body = ResultVo.success(result)
+  }
+
+  async getDustbin(ctx) {
+    const result = await DustbinService.findAllNoPage()
+    ctx.body = ResultVo.success(result)
+  }
+
+  async getCategory(ctx) {
+    const result = await CategoryService.findAllCategory()
+    ctx.body = ResultVo.success(result)
+  }
+
+  async getQuestion(ctx) {
+    const result = await QuestionService.randomQuestion()
+    ctx.body = await ResultVo.success(result)
+  }
+
+  async addIntegral(ctx) {
+    const { email } = ctx.state.user
+    const { count } = ctx.request.body
+    if (!count) {
+      throw new HttpException(10000, errCode['10000'])
+    }
+    const info = await UserService.findByEmail(email)
+    const result = await UserService.updateUser(email, { integral_count: info.integral_count + count })
+    if (result < 1) {
+      throw new HttpException(10013, errCode['10013'])
+    }
+    ctx.body = ResultVo.successNull()
+  }
+
+  async createRecord(ctx) {
+    const payload = ctx.state.user
+    const { room_num, estate, dustbinId, categoryId } = ctx.request.body
+    if (!room_num || !estate || !dustbinId || !categoryId) {
+      throw new HttpException(10000, errCode['10000'])
+    }
+    const record_num = randomRecord()
+    const userId = payload.id
+
+    try {
+      const result = await RecordService.save({ userId, record_num, estate, dustbinId, room_num, categoryId })
+      ctx.body = ResultVo.success(result)
+    } catch (e) {
+      throw new HttpException(10001, errCode['10001'])
+    }
+  }
+
+  async searchGarbage(ctx) {
+    const { garbage_info } = ctx.request.query
+
+    if (!garbage_info) {
+      throw new HttpException(10000, errCode['10000'])
+    }
+    const result = await GarbageService.findByGarbage(garbage_info)
+    ctx.body = ResultVo.success(result)
   }
 }
 

@@ -5,6 +5,7 @@ import { HttpException } from '@/exception/ResultException';
 import HotArticleService from '@/api/service/HotArticleService';
 import fs from 'fs'
 import path from 'path'
+import { upload } from '@/utils/upload';
 
 class ManageArticleController {
   async create(ctx) {
@@ -13,12 +14,7 @@ class ManageArticleController {
     if (!title || !description || !origin || !content) {
       throw new HttpException(10000, errCode['10000'])
     }
-    const reader = fs.createReadStream(file.path)
-    const filePath = path.join('public/static/upload', `/${genFileName()}.${file.name.split('.')[1]}`)
-    const write = fs.createWriteStream(filePath)
-    reader.pipe(write)
-    const url = path.join('/static/upload', path.basename(filePath))
-    const image = url.replace(/\\/g, '/')
+    const image = upload(file)
     const result = await HotArticleService.save({ title, image, description, origin, content })
     if (!result) {
       throw new HttpException(10001, errCode['10001'])
@@ -111,6 +107,30 @@ class ManageArticleController {
     }
     const result = await HotArticleService.findById(id)
     ctx.body = ResultVo.success(result)
+  }
+
+  async stickArticle(ctx) {
+    const { id } = ctx.params
+    if (!id) {
+      throw new HttpException(10000, errCode['10000'])
+    }
+    const result = await HotArticleService.stick(id)
+    if (result < 1) {
+      throw new HttpException(10013, errCode['10013'])
+    }
+    ctx.body = ResultVo.successNull()
+  }
+
+  async disStickArticle(ctx) {
+    const { id } = ctx.params
+    if (!id) {
+      throw new HttpException(10000, errCode['10000'])
+    }
+    const result = await HotArticleService.disStick(id)
+    if (result < 1) {
+      throw new HttpException(10013, errCode['10013'])
+    }
+    ctx.body = ResultVo.successNull()
   }
 }
 

@@ -16,7 +16,6 @@ class ManageImageController {
     // const url = path.join('/static/upload', path.basename(filePath))
     // const _img = url.replace(/\\/g, '/')
     const image = upload(file)
-    console.log(image)
     try {
       const result = await ImageService.save({ url: image })
       ctx.body = ResultVo.success(result)

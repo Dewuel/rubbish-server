@@ -12,7 +12,7 @@ const upload = file => {
   if (!fs.readdirSync(path.join('public/static/upload'))) {
     fs.mkdirSync(path.join('public/static/upload'), { recursive: true })
   }
-  const filePath = path.join('public/static/upload', `/${genFileName()}.${path.extname(file.name())}`)
+  const filePath = path.join('public/static/upload', `/${genFileName()}.${path.extname(file.name)}`)
   const write = fs.createWriteStream(filePath)
   reader.pipe(write)
   const _filePath = path.join('/static/upload', path.basename(filePath))

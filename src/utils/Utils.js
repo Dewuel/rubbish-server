@@ -43,7 +43,7 @@ const randomRecord = () => {
 
 const genFileName = () => {
   const len = 16
-  const chr = 'abcdefkmstwxz23456789'
+  const chr = 'abcdefhs23456789'
   const maxLength = chr.length
   let str = ''
   for (let i = 0; i < len; i++) {

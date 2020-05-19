@@ -1,23 +1,24 @@
 import ResultVo from '@/utils/ResultVo';
 import { errCode } from '@/enums/enum';
-import { genFileName, toInt } from '@/utils/Utils';
+import { toInt } from '@/utils/Utils';
 import { HttpException } from '@/exception/ResultException';
-import fs from 'fs'
-import path from 'path'
 import ImageService from '@/api/service/ImageService';
 import config from '@/config'
+import { upload } from '@/utils/upload';
 
 class ManageImageController {
   async create(ctx) {
     const { file } = ctx.request.files
-    const reader = fs.createReadStream(file.path)
-    const filePath = path.join(`public/static/upload/${genFileName()}.${file.name.split('.')[1]}`)
-    const write = fs.createWriteStream(filePath)
-    reader.pipe(write)
-    const url = path.join('/static/upload', path.basename(filePath))
-    const _img = url.replace(/\\/g, '/')
+    // const reader = fs.createReadStream(file.path)
+    // const filePath = path.join(`public/static/upload/${genFileName()}.${file.name.split('.')[1]}`)
+    // const write = fs.createWriteStream(filePath)
+    // reader.pipe(write)
+    // const url = path.join('/static/upload', path.basename(filePath))
+    // const _img = url.replace(/\\/g, '/')
+    const image = upload(file)
+    console.log(image)
     try {
-      const result = await ImageService.save({ url: _img })
+      const result = await ImageService.save({ url: image })
       ctx.body = ResultVo.success(result)
     } catch (e) {
       throw new HttpException(10001, errCode['10001'])

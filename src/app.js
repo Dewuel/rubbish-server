@@ -18,7 +18,7 @@ const app = new Koa();
 const isDevMode = process.env.NODE_ENV !== 'production'
 
 const jwt = JWT({ secret: config.JWT_SECRET }).unless({
-  path: [/^\/static/, /^\/users\/login/, /^\/users\/register/, /^\/users\/getcode/, /^\/users\/code/,
+  path: [/^\/static\/*/, /^\/users\/login/, /^\/users\/register/, /^\/users\/getcode/, /^\/users\/code/,
     /^\/cms\/admin\/login/]
 })
 

@@ -79,6 +79,7 @@ class UserController {
         integral_count: user.integral_count,
         address: user.address,
         tel: user.tel,
+        avatar: user.avatar,
         token,
       }
       ctx.body = ResultVo.success(response)

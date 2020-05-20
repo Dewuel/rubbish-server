@@ -12,7 +12,6 @@ import compress from 'koa-compress'
 import onerror from 'koa-onerror'
 import config from './config/index'
 import ErrorHandle from '@/utils/ErrorHandle';
-// import { getJWTPayload } from '@/utils/Utils';
 
 const app = new Koa();
 

@@ -4,9 +4,6 @@ import bcrypt from 'bcrypt'
 import ResultVo from '@/utils/ResultVo';
 import { errCode } from '@/enums/enum';
 import { genToken, getJWTPayload } from '@/utils/Utils';
-import fs from 'fs';
-import path from 'path';
-import dayjs from 'dayjs';
 import config from '../../config'
 import { upload } from '@/utils/upload';
 

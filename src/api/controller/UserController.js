@@ -220,6 +220,15 @@ class UserController {
     const result = await GarbageService.findByGarbage(garbage_info)
     ctx.body = ResultVo.success(result)
   }
+
+  async getArticleDetail(ctx) {
+    const { id } = ctx.params
+    if (!id) {
+      throw new HttpException(10000, errCode['10000'])
+    }
+    const result = await HotArticleService.findById(id)
+    ctx.body = ResultVo.success(result)
+  }
 }
 
 export default new UserController()

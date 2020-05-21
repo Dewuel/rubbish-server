@@ -25,5 +25,6 @@ router.get('/questions', UserController.getQuestion)
 router.post('/createRecord', UserController.createRecord)
 router.get('/searchGarbage', UserController.searchGarbage)
 router.post('/addIntegral', UserController.addIntegral)
+router.get('/hotNews', UserController.getHotNews)
 
 export default router;

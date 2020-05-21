@@ -151,7 +151,12 @@ class UserController {
   }
 
   async getNewArticles(ctx) {
-    const result = HotArticleService.getAllByStick()
+    const result = await HotArticleService.getAllByStick()
+    ctx.body = ResultVo.success(result)
+  }
+
+  async getHotNews(ctx) {
+    const result = await HotArticleService.findAll(0, 4)
     ctx.body = ResultVo.success(result)
   }
 

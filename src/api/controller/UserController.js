@@ -166,7 +166,7 @@ class UserController {
     if (!limit) {
       limit = 10
     }
-    const result = await HotArticleService.findAll(toInt(offset) - 1, limit)
+    const result = await HotArticleService.findAll(toInt(offset) - 1, toInt(limit))
     ctx.body = ResultVo.success(result)
   }
 

@@ -20,8 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/controller/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/controller/UserController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +47,11 @@
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="C:\Document\Soft\IntelliJIDEA\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -107,6 +108,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="823" y="434" key="#ESLint" timestamp="1590033012223">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="823" y="434" key="#ESLint/0.0.1920.1050@0.0.1920.1050" timestamp="1590033012223" />
     <state x="664" y="234" key="#JavaScript" timestamp="1588947853615">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -135,10 +140,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1352" height="257" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588955386131" />
-    <state x="736" y="244" key="RollbackChangesDialog" timestamp="1589957348005">
+    <state x="736" y="244" key="RollbackChangesDialog" timestamp="1590032879645">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="736" y="244" key="RollbackChangesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1589957348005" />
+    <state x="736" y="244" key="RollbackChangesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1590032879645" />
     <state x="498" y="169" key="SettingsEditor" timestamp="1588947529520">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

@@ -106,7 +106,10 @@ class UserController {
     const salt = bcrypt.genSaltSync(10);
     const cryptPass = bcrypt.hashSync(newPassword, salt)
     const res = await UserService.updatePass(email, { password: cryptPass })
-    console.log(res)
+    if (res < 1) {
+      throw new HttpException(10013, errCode['10013'])
+    }
+    ctx.body = ResultVo.successNull()
   }
 
   async changeUserInfo(ctx) {
@@ -156,7 +159,14 @@ class UserController {
   }
 
   async getHotNews(ctx) {
-    const result = await HotArticleService.findAll(0, 4)
+    let { offset, limit } = ctx.request.query
+    if (!offset) {
+      offset = 1
+    }
+    if (!limit) {
+      limit = 10
+    }
+    const result = await HotArticleService.findAll(toInt(offset) - 1, limit)
     ctx.body = ResultVo.success(result)
   }
 

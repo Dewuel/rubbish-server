@@ -258,7 +258,7 @@ class UserController {
     if (!limit) {
       limit = 6
     }
-    const result = await HotArticleService.getRandomArticle(limit)
+    const result = await HotArticleService.getRandomArticle(toInt(limit))
     ctx.body = ResultVo.success(result)
   }
 }

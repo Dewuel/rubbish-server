@@ -1,5 +1,5 @@
 import models from '../../models';
-import { Op } from 'sequelize';
+import Sequelize, { Op } from 'sequelize';
 
 class HotArticleService {
   async save(data) {
@@ -79,6 +79,13 @@ class HotArticleService {
       },
       limit: 10,
       order: [['id', 'DESC']]
+    })
+  }
+
+  async getRandomArticle(limit) {
+    return models.hot_article.findAll({
+      order: [[Sequelize.literal('RAND()')]],
+      limit
     })
   }
 }

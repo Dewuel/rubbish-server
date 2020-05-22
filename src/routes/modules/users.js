@@ -28,5 +28,6 @@ router.post('/addIntegral', UserController.addIntegral)
 router.get('/hotNews', UserController.getHotNews)
 router.get('/articleDetail/:id', UserController.getArticleDetail)
 router.get('/findArticle', UserController.searchArticles)
+router.get('/randArticle', UserController.getRandomArticles)
 
 export default router;

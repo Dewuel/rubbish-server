@@ -243,11 +243,22 @@ class UserController {
 
   async searchArticles(ctx) {
     const { title, offset, limit } = ctx.request.query
-    if (!title) {
-      throw new HttpException(10000, errCode['10000'])
-    }
     const { page, size } = Validate.validatePage(offset, limit)
+    if (!title) {
+      const result = await HotArticleService.findAll(page - 1, limit)
+      ctx.body = ResultVo.success(result)
+      return
+    }
     const result = await HotArticleService.findAllByTitle(title, page - 1, size)
+    ctx.body = ResultVo.success(result)
+  }
+
+  async getRandomArticles(ctx) {
+    let { limit } = ctx.request.query
+    if (!limit) {
+      limit = 6
+    }
+    const result = await HotArticleService.getRandomArticle(limit)
     ctx.body = ResultVo.success(result)
   }
 }

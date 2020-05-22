@@ -17,6 +17,7 @@ import DustbinService from '@/api/service/DustbinService';
 import CategoryService from '@/api/service/CategoryService';
 import QuestionService from '@/api/service/QuestionService';
 import GarbageService from '@/api/service/GarbageService';
+import Validate from '@/validate/Validate';
 
 class UserController {
   async getCode(ctx) {
@@ -237,6 +238,22 @@ class UserController {
       throw new HttpException(10000, errCode['10000'])
     }
     const result = await HotArticleService.findById(id)
+    ctx.body = ResultVo.success(result)
+  }
+
+  async searchArticles(ctx) {
+    const { title, offset, limit } = ctx.request.query
+    if (!title) {
+      throw new HttpException(10000, errCode['10000'])
+    }
+    // if (!offset) {
+    //   offset = 1
+    // }
+    // if (!limit) {
+    //   limit = 10
+    // }
+    const { page, size } = Validate.validatePage(offset, limit)
+    const result = await HotArticleService.findAllByTitle(title, page - 1, size)
     ctx.body = ResultVo.success(result)
   }
 }

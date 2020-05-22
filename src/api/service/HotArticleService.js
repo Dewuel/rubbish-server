@@ -22,7 +22,7 @@ class HotArticleService {
     return models.hot_article.findAndCountAll({
       where: {
         title: {
-          [Op.like]: `%${title}`
+          [Op.like]: `${title}%`
         }
       },
       offset,

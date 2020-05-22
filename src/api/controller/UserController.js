@@ -246,12 +246,6 @@ class UserController {
     if (!title) {
       throw new HttpException(10000, errCode['10000'])
     }
-    // if (!offset) {
-    //   offset = 1
-    // }
-    // if (!limit) {
-    //   limit = 10
-    // }
     const { page, size } = Validate.validatePage(offset, limit)
     const result = await HotArticleService.findAllByTitle(title, page - 1, size)
     ctx.body = ResultVo.success(result)

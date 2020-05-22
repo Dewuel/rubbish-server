@@ -10,7 +10,7 @@ class HotArticleService {
     return models.hot_article.findByPk(id)
   }
 
-  async findAll(offset = 0, limit = 10) {
+  async findAll(offset, limit) {
     return models.hot_article.findAndCountAll({
       offset,
       limit,
@@ -18,7 +18,7 @@ class HotArticleService {
     })
   }
 
-  async findAllByTitle(title, offset = 0, limit = 10) {
+  async findAllByTitle(title, offset, limit) {
     return models.hot_article.findAndCountAll({
       where: {
         title: {

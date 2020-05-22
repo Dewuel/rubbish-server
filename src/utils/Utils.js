@@ -20,7 +20,7 @@ const genToken = data => {
 }
 
 const toInt = num => {
-  return Number(num) || 0
+  return Number(num) || 1
 }
 
 const randomNum = () => {

@@ -34,8 +34,7 @@ const middleware = compose([
   }),
   statics(path.join(process.cwd(), 'public')),
   cors({
-    origin: '*',
-    exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
+    origin: '*'
   }),
   helmet(),
   koaJson(),

@@ -131,6 +131,7 @@ class UserController {
   }
 
   async changeAvatar(ctx) {
+    ctx.set('Access-Control-Allow-Origin', '*');
     const { file } = ctx.request.files;
     const { email } = ctx.state.user
     const image = upload(file)

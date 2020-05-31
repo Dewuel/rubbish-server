@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="" />
+    <list default="true" id="8f2be19c-0c02-42bd-954e-74ce938a5490" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,6 +92,8 @@
       <workItem from="1590036043952" duration="1771000" />
       <workItem from="1590112516697" duration="809000" />
       <workItem from="1590117327739" duration="9226000" />
+      <workItem from="1590279871929" duration="39000" />
+      <workItem from="1590644459488" duration="77000" />
     </task>
     <servers />
   </component>
@@ -125,6 +129,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="860" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1589300057156" />
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1590644478699">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1590644478699" />
     <state width="1352" height="257" key="GridCell.Tab.0.bottom" timestamp="1588955386132">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -141,10 +149,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1352" height="257" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588955386131" />
-    <state x="736" y="244" key="RollbackChangesDialog" timestamp="1590032879645">
+    <state x="736" y="244" key="RollbackChangesDialog" timestamp="1590223232847">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="736" y="244" key="RollbackChangesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1590032879645" />
+    <state x="736" y="244" key="RollbackChangesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1590223232847" />
     <state x="498" y="169" key="SettingsEditor" timestamp="1588947529520">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

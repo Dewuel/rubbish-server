@@ -32,7 +32,7 @@ class ManageCategoryController {
 
   async findAllCategory(ctx) {
     const { offset } = ctx.request.query
-    const list = await CategoryService.findAll(toInt(offset - 1))
+    const list = await CategoryService.findAll(toInt(offset) - 1)
     ctx.body = ResultVo.success(list)
   }
 
